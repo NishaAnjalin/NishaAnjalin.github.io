@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishanthi Arulrasu - AI Developer & UI/UX Designer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            /* Global Color Variables */
+            --primary-bg: #121212;
+            --secondary-bg: #1e1e1e;
+            --tertiary-bg: #2a2a2a;
+            --card-bg: #2a2a2a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --text-light: #f8fafc;
+            --accent: #0d9488;
+            --accent-hover: #0db39e;
+            --accent-secondary: #8b5cf6;
+            --accent-secondary-hover: #7c3aed;
+            --axure-color: #FF5C5C;
+            --axure-hover: #ff3a3a;
+            --nav-bg: rgba(18, 18, 18, 0.9);
+            
+            /* Light Mode Overrides */
+            --light-primary-bg: #f8fafc;
+            --light-secondary-bg: #e2e8f0;
+            --light-tertiary-bg: #cbd5e1;
+            --light-card-bg: #f1f5f9;
+            --light-text-primary: #1e293b;
+            --light-text-secondary: #4b5563;
+            --light-nav-bg: rgba(248, 250, 252, 0.9);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-primary);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.light-mode {
+            --primary-bg: var(--light-primary-bg);
+            --secondary-bg: var(--light-secondary-bg);
+            --tertiary-bg: var(--light-tertiary-bg);
+            --card-bg: var(--light-card-bg);
+            --text-primary: var(--light-text-primary);
+            --text-secondary: var(--light-text-secondary);
+            --nav-bg: var(--light-nav-bg);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        .theme-toggle {
+            transition: all 0.3s ease;
+        }
+        .theme-toggle:hover {
+            transform: rotate(15deg) scale(1.1);
+        }
+        .nav-link {
+            position: relative;
+            padding-bottom: 4px;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        .nav-link.active {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        /* Enhanced Contact Section */
+        .contact-card {
+            background-color: var(--secondary-bg);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .social-icon {
+            color: var(--accent);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            color: var(--accent-hover);
+            transform: translateY(-3px);
+        }
+        .email-directly {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        
+        /* Custom Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .float-animation {
+            animation: float 5s ease-in-out infinite;
+        }
+        
+        /* Skill Category Colors */
+        .skill-ai {
+            background: linear-gradient(135deg, var(--accent), #0db39e);
+        }
+        .skill-uiux {
+            background: linear-gradient(135deg, var(--accent-secondary), #7c3aed);
+        }
+        .skill-axure {
+            background: linear-gradient(135deg, var(--axure-color), #ff3a3a);
+        }
+        .skill-dev {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+        }
+        
+        /* Card Hover Effects */
+        .project-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        /* Timeline Customization */
+        .timeline-item:nth-child(odd) .timeline-content {
+            background: linear-gradient(135deg, var(--accent), transparent);
+        }
+        .timeline-item:nth-child(even) .timeline-content {
+            background: linear-gradient(135deg, var(--accent-secondary), transparent);
+        }
+        
+        /* Axure RP Specific Styling */
+        .axure-badge {
+            background: linear-gradient(135deg, var(--axure-color), #ff3a3a);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[var(--nav-bg)] backdrop-blur-sm shadow-md">
+        <nav class="container flex items-center justify-between py-4">
+            <!-- Logo/Name -->
+            <a href="#hero" class="text-2xl font-bold text-[var(--accent)]">Nishanthi Arulrasu</a>
+
+            <div class="flex items-center space-x-6">
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">About</a>
+                    <a href="#projects" class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Projects</a>
+                    <a href="#skills" class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Skills</a>
+                    <a href="#uiux" class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">UI/UX</a>
+                    <a href="#experience" class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Experience</a>
+                    <a href="#contact" class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Contact</a>
+                </div>
+                
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="theme-toggle bg-[var(--tertiary-bg)] rounded-full p-2">
+                    <i id="moon-icon" class="fas fa-moon text-yellow-300"></i>
+                    <i id="sun-icon" class="fas fa-sun text-yellow-500 hidden"></i>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-[var(--primary-bg)] shadow-md py-4">
+            <div class="flex flex-col items-center space-y-4">
+                <a href="#about" class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300" onclick="closeMenu()">About</a>
+                <a href="#projects" class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300" onclick="closeMenu()">Projects</a>
+                <a href="#skills" class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300" onclick="closeMenu()">Skills</a>
+                <a href="#uiux" class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300" onclick="closeMenu()">UI/UX</a>
+                <a href="#experience" class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300" onclick="closeMenu()">Experience</a>
+                <a href="#contact" class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300" onclick="closeMenu()">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center justify-center text-center">
+            <div class="container py-20">
+                <h1 class="text-5xl md:text-7xl font-bold text-[var(--text-primary)] mb-4">
+                    Hi, I'm <span class="text-[var(--accent)]">Nishanthi Arulrasu</span>
+                </h1>
+                <div class="inline-block bg-gradient-to-r from-[var(--accent)] to-[var(--accent-secondary)] text-transparent bg-clip-text">
+                    <p class="text-xl md:text-2xl font-bold mb-2">AI Developer & UI/UX Designer</p>
+                </div>
+                <p class="text-lg md:text-xl text-[var(--text-secondary)] mb-8 max-w-3xl mx-auto">
+                    Crafting intelligent AI solutions with beautiful, user-centered designs. 
+                    Bridging the gap between complex algorithms and intuitive user experiences.
+                    <span class="block mt-2 text-[var(--axure-color)] font-semibold">Expert in Axure RP for high-fidelity prototyping</span>
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#projects" class="bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
+                        View My Work
+                    </a>
+                    <a href="#uiux" class="bg-[var(--axure-color)] hover:bg-[var(--axure-hover)] text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
+                        See UI/UX Portfolio
+                    </a>
+                </div>
+                <div class="mt-12">
+                    <a href="#about" class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">
+                        <i class="fas fa-chevron-down float-animation text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 md:py-32">
+            <div class="container">
+                <h2 class="text-4xl font-bold text-[var(--text-primary)] mb-10 text-center">About Me</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-[var(--accent)] to-[var(--axure-color)] rounded-2xl opacity-20 blur-lg"></div>
+                        <img src="Nisha.jpeg" alt="Nishanthi Arulrasu" class="relative rounded-xl shadow-lg w-full h-auto object-cover z-10">
+                    </div>
+                    <div class="text-lg text-[var(--text-secondary)] leading-relaxed">
+                        <p class="mb-4">
+                            Hello! I'm <span class="text-[var(--accent)] font-semibold">Nishanthi Arulrasu</span>, a passionate Artificial Intelligence developer and UI/UX designer with specialized expertise in <span class="text-[var(--axure-color)] font-semibold">Axure RP</span>. I bridge the gap between cutting-edge AI technology and human-centered design, creating solutions that are not only intelligent but also intuitive and beautiful.
+                        </p>
+                        <p class="mb-4">
+                            My journey combines technical expertise in machine learning, deep learning, and computer vision with advanced UI/UX design skills using Axure RP for high-fidelity prototyping, complex interactions, and detailed user flows.
+                        </p>
+                        <p class="mb-6">
+                            With strong skills in <span class="text-[var(--axure-color)]">Axure RP prototyping</span> alongside Python and TensorFlow, I approach every project with both analytical precision and creative empathy. Whether I'm designing neural networks or interactive prototypes, my goal remains the same: to create meaningful, impactful experiences.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mt-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-brain text-[var(--accent)] mr-3"></i>
+                                <span>AI/ML Development</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-mouse-pointer text-[var(--axure-color)] mr-3"></i>
+                                <span>Axure RP Expert</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-code text-[var(--accent)] mr-3"></i>
+                                <span>Full Stack Development</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-users text-[var(--accent-secondary)] mr-3"></i>
+                                <span>User Research & Testing</span>
+                            </div>
+                        </div>
+                        <div class="mt-8 flex space-x-4">
+                            <a href="https://github.com/NishaAnjalin" target="_blank" class="inline-flex items-center text-[var(--accent)] hover:text-[var(--accent-hover)] transition-colors duration-300">
+                                <i class="fab fa-github mr-2"></i>
+                                GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/nishanthi-arulrasu-b10260279" target="_blank" class="inline-flex items-center text-[var(--accent)] hover:text-[var(--accent-hover)] transition-colors duration-300">
+                                <i class="fab fa-linkedin mr-2"></i>
+                                LinkedIn
+                            </a>
+                            <a href="#contact" class="inline-flex items-center text-[var(--axure-color)] hover:text-[var(--axure-hover)] transition-colors duration-300">
+                                <i class="fas fa-envelope mr-2"></i>
+                                Contact
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 md:py-32 bg-[var(--secondary-bg)]">
+            <div class="container">
+                <h2 class="text-4xl font-bold text-[var(--text-primary)] mb-10 text-center">My Projects</h2>
+                <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    <!-- AI Project 1 -->
+                    <div class="project-card bg-[var(--card-bg)] rounded-xl shadow-lg overflow-hidden">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80" alt="Face Emotion Recognition" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                            <span class="absolute top-4 left-4 bg-[var(--accent)] text-white text-xs font-semibold px-3 py-1 rounded-full">AI/ML</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-[var(--text-primary)] mb-2">Face Emotion Recognition</h3>
+                            <p class="text-[var(--text-secondary)] text-sm mb-4">Real-time facial emotion detection system using computer vision and deep learning. Identifies emotions from live webcam feeds with high accuracy.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="skill-ai text-white text-xs font-semibold px-2 py-1 rounded-full">Python</span>
+                                <span class="skill-ai text-white text-xs font-semibold px-2 py-1 rounded-full">OpenCV</span>
+                                <span class="skill-ai text-white text-xs font-semibold px-2 py-1 rounded-full">TensorFlow</span>
+                                <span class="skill-ai text-white text-xs font-semibold px-2 py-1 rounded-full">Keras</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <a href="https://github.com/NishaAnjalin/Face-emotion-recognition" target="_blank" class="text-[var(--accent)] hover:text-[var(--accent-hover)] font-medium transition-colors duration-300 flex items-center">
+                                    <i class="fab fa-github mr-2"></i>
+                                    Source
+                                </a>
+                                <a href="#contact" class="text-[var(--axure-color)] hover:text-[var(--axure-hover)] font-medium transition-colors duration-300">
+                                    View Case Study →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- UI/UX Project with Axure -->
+                    <div class="project-card bg-[var(--card-bg)] rounded-xl shadow-lg overflow-hidden">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80" alt="AI Dashboard Design" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                            <span class="absolute top-4 left-4 bg-[var(--axure-color)] text-white text-xs font-semibold px-3 py-1 rounded-full">UI/UX with Axure</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-[var(--text-primary)] mb-2">AI Analytics Dashboard</h3>
+                            <p class="text-[var(--text-secondary)] text-sm mb-4">Complex interactive dashboard designed in Axure RP with dynamic data visualization, user role management, and real-time interactions.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="skill-axure text-white text-xs font-semibold px-2 py-1 rounded-full">Axure RP</span>
+                                <span class="skill-uiux text-white text-xs font-semibold px-2 py-1 rounded-full">Figma</span>
+                                <span class="skill-uiux text-white text-xs font-semibold px-2 py-1 rounded-full">User Research</span>
+                                <span class="skill-axure text-white text-xs font-semibold px-2 py-1 rounded-full">Advanced Interactions</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <a href="#contact" class="text-[var(--axure-color)] hover:text-[var(--axure-hover)] font-medium transition-colors duration-300 flex items-center">
+                                    <i class="fas fa-external-link-alt mr-2"></i>
+                                    View Prototype
+                                </a>
+                                <a href="#uiux" class="text-[var(--accent)] hover:text-[var(--accent-hover)] font-medium transition-colors duration-300">
+                                    Design Process →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI Project 3 -->
+                    <div class="project-card bg-[var(--card-bg)] rounded-xl shadow-lg overflow-hidden">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80" alt="Object Tracking" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                            <span class="absolute top-4 left-4 bg-[var(--accent)] text-white text-xs font-semibold px-3 py-1 rounded-full">Computer Vision</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-[var(--text-primary)] mb-2">Color-based Object Tracking</h3>
+                            <p class="text-[var(--text-secondary)] text-sm mb-4">Real-time object detection and tracking system using color isolation techniques in video streams and camera feeds.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="skill-ai text-white text-xs font-semibold px-2 py-1 rounded-full">Python</span>
+                                <span class="skill-ai text-white text-xs font-semibold px-2 py-1 rounded-full">OpenCV</span>
+                                <span class="skill-ai text-white text-xs font-semibold px-2 py-1 rounded-full">Color Detection</span>
+                                <span class="skill-ai text-white text-xs font-semibold px-2 py-1 rounded-full">Video Processing</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <a href="https://github.com/NishaAnjalin/Object-tracking-based-on-color" target="_blank" class="text-[var(--accent)] hover:text-[var(--accent-hover)] font-medium transition-colors duration-300 flex items-center">
+                                    <i class="fab fa-github mr-2"></i>
+                                    Source
+                                </a>
+                                <a href="#contact" class="text-[var(--axure-color)] hover:text-[var(--axure-hover)] font-medium transition-colors duration-300">
+                                    See Demo →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 md:py-32">
+            <div class="container">
+                <h2 class="text-4xl font-bold text-[var(--text-primary)] mb-10 text-center">My Skills</h2>
+                
+                <!-- AI/ML Skills -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-semibold text-[var(--accent)] mb-6 flex items-center">
+                        <i class="fas fa-brain mr-3"></i>
+                        Artificial Intelligence & Machine Learning
+                    </h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                        <div class="skill-card bg-gradient-to-br from-[var(--accent)] to-teal-600 p-4 rounded-xl shadow-lg text-center transition-transform duration-300 hover:scale-105">
+                            <i class="fab fa-python text-3xl mb-2 text-white"></i>
+                            <p class="text-white text-sm font-semibold">Python</p>
+                        </div>
+                        <div class="skill-card bg-gradient-to-br from-[var(--accent)] to-teal-600 p-4 rounded-xl shadow-lg text-center transition-transform duration-300 hover:scale-105">
+                            <i class="fas fa-robot text-3xl mb-2 text-white"></i>
+                            <p class="text-white text-sm font-semibold">TensorFlow</p>
+                        </div>
+                        <div class="skill-card bg-gradient-to-br from-[var(--accent)] to-teal-600 p-4 rounded-xl shadow-lg text-center transition-transform duration-300 hover:scale-105">
+                            <i class="fas fa-project-diagram text-3xl mb-2 text-white"></i>
+                            <p class="text-white text-sm font-semibold">PyTorch</p>
+                        </div>
+                        <div class="skill-card bg-gradient-to-br from-[var(--accent)] to-teal-600 p-4 rounded-xl shadow-lg text-center transition-transform duration-300 hover:scale-105">
+                            <i class="fas fa-eye text-3xl mb-2 text-white"></i>
+                            <p class="text-white text-sm font-semibold">OpenCV</p>
+                        </div>
+                        <div class="skill-card bg-gradient-to-br from-[var(--accent)] to-teal-600 p-4 rounded-xl shadow-lg text-center transition-transform duration-300 hover:scale-105">
+                            <i class="fas fa-chart-line text-3xl mb-2 text-white"></i>
+                            <p class="text-white text-sm font-semibold">Pandas/Numpy</p>
+                        </div>
+                        <div class="skill-card bg-gradient-to-br from-[var(--accent)] to-teal-600 p-4 rounded-xl shadow-lg text-center transition-transform duration-300 hover:scale-105">
+                            <i class="fas fa-language text-3xl mb-2 text-white"></i>
+                            <p class="text-white text-sm font-semibold">NLTK/SpaCy</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UI/UX Design Skills with Axure Focus -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-semibold text-[var(--axure-color)] mb-6 flex items-center">
+                        <i class="fas fa-palette mr-3"></i>
+                        UI/UX Design (Axure RP Specialist)
+                    </h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                        <div class="skill-card bg-gradient-to-br from-[var(--axure-color)] to-red-600 p-4 rounded-xl shadow-lg text-center transition-transform duration-300 hover:scale-105">
+                            <i class="fas fa-mouse-pointer text-3xl mb-2 text-white"></i>
+                            <p class="text-white text-sm font-semibold">Axure RP Pro</p>
+                        </div>
+                        <div class="skill-card bg-gradient-to-br from-[var(--axure-color)] to-red-600 p-4 rounded-xl shadow-lg text-center transition-transform duration-300 hover:scale-105">
+                            <i class="fas fa-project-diagram text-3xl mb-2 text-white"></i>
+                            <p class="text-white text-sm font-semibold">Complex Prototyping</p>
+                        </div>
+                        <div class="skill-card bg-gradient-to-br from-purple-500 to-[var(--accent-secondary)] p-4 rounded-xl shadow-lg text-center transition-transform duration-300 hover:scale-105">
+                            <i class="fab fa-figma text-3xl mb-2 text-white"></i>
+                            <p class="text-white text-sm font-semibold">Figma</p>
+                        </div>
+                        <div class="skill-card bg-gradient-to-br from-[var(--axure-color)] to-red-600 p-4 rounded-xl shadow-lg text-center transition-transform duration-300 hover:scale-105">
+                            <i class="fas fa-sitemap text-3xl mb-2 text-white"></i>
+                            <p class="text-white text-sm font-semibold">Wireframing</p>
+                        </div>
+                        <div class="skill-card bg-gradient-to-br from-[var(--axure-color)] to-red-600 p-4 rounded-xl shadow-lg text-center transition-transform duration-300 hover:scale-105">
+                            <i class="fas fa-user-friends text-3xl mb-2 text-white"></i>
+                            <p class="text-white text-sm font-semibold">User Research</p>
+                        </div>
+                        <div class="skill-card bg-gradient-to-br from-[var(--axure-color)] to-red-600 p-4 rounded-xl shadow-lg text-center transition-transform duration-300 hover:scale-105">
+                            <i class="fas fa-tasks text-3xl mb-2 text-white"></i>
+                            <p class="text-white text-sm font-semibold">Usability Testing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Development Skills -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-blue-500 mb-6 flex items-center">
+                        <i class="fas fa-code mr-3"></i>
+                        Development & Tools
+                    </h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                        <div class="skill-card bg-gradient-to-br from-blue-500 to-blue-700 p-4 rounded-xl shadow-lg text-center transition-transform duration-300 hover:scale-105">
+                            <i class="fab fa-js text-3xl mb-2 text-white"></i>
+                            <p class="text-white text-sm font-semibold">JavaScript</p>
+                        </div>
+                        <div class="skill-card bg-gradient-to-br from-blue-500 to-blue-700 p-4 rounded-xl shadow-lg text-center transition-transform duration-300 hover:scale-105">
+                            <i class="fas fa-database text-3xl mb-2 text-white"></i>
+                            <p class="text-white text-sm font-semibold">MySQL</p>
+                        </div>
+                        <div class="skill-card bg-gradient-to-br from-blue-500 to-blue-700 p-4 rounded-xl shadow-lg text-center transition-transform duration-300 hover:scale-105">
+                            <i class="fab fa-git-alt text-3xl mb-2 text-white"></i>
+                            <p class="text-white text-sm font-semibold">Git</p>
+                        </div>
+                        <div class="skill-card bg-gradient-to-br from-blue-500 to-blue-700 p-4 rounded-xl shadow-lg text-center transition-transform duration-300 hover:scale-105">
+                            <i class="fab fa-html5 text-3xl mb-2 text-white"></i>
+                            <p class="text-white text-sm font-semibold">HTML/CSS</p>
+                        </div>
+                        <div class="skill-card bg-gradient-to-br from-blue-500 to-blue-700 p-4 rounded-xl shadow-lg text-center transition-transform duration-300 hover:scale-105">
+                            <i class="fab fa-java text-3xl mb-2 text-white"></i>
+                            <p class="text-white text-sm font-semibold">Java</p>
+                        </div>
+                        <div class="skill-card bg-gradient-to-br from-blue-500 to-blue-700 p-4 rounded-xl shadow-lg text-center transition-transform duration-300 hover:scale-105">
+                            <i class="fas fa-terminal text-3xl mb-2 text-white"></i>
+                            <p class="text-white text-sm font-semibold">CLI Tools</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UI/UX Design Section with Axure Focus -->
+        <section id="uiux" class="py-20 md:py-32 bg-[var(--secondary-bg)]">
+            <div class="container">
+                <h2 class="text-4xl font-bold text-[var(--text-primary)] mb-10 text-center">UI/UX Design with Axure RP</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="axure-badge inline-block mb-4">Axure RP Specialist</div>
+                        <h3 class="text-2xl font-semibold text-[var(--axure-color)] mb-6">Advanced Prototyping Expertise</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-[var(--axure-color)] p-3 rounded-lg mr-4">
+                                    <i class="fas fa-mouse-pointer text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-[var(--text-primary)] mb-2">Complex Interactive Prototypes</h4>
+                                    <p class="text-[var(--text-secondary)]">Creating high-fidelity prototypes with conditional logic, dynamic content, and realistic user flows in Axure RP.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-[var(--accent)] p-3 rounded-lg mr-4">
+                                    <i class="fas fa-sitemap text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-[var(--text-primary)] mb-2">Information Architecture</h4>
+                                    <p class="text-[var(--text-secondary)]">Designing comprehensive sitemaps, user flows, and navigation structures that ensure intuitive user experiences.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-[var(--axure-color)] p-3 rounded-lg mr-4">
+                                    <i class="fas fa-users text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-[var(--text-primary)] mb-2">User Testing & Validation</h4>
+                                    <p class="text-[var(--text-secondary)]">Conducting usability tests with interactive prototypes to gather feedback and iterate on designs effectively.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-[var(--accent-secondary)] p-3 rounded-lg mr-4">
+                                    <i class="fas fa-code text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-[var(--text-primary)] mb-2">Technical Documentation</h4>
+                                    <p class="text-[var(--text-secondary)]">Creating detailed specifications, annotations, and documentation for development teams using Axure RP's built-in tools.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-[var(--card-bg)] p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-2xl font-semibold text-[var(--text-primary)] mb-6 text-center">Axure RP Capabilities</h3>
+                        <div class="grid grid-cols-2 gap-6 text-center">
+                            <div>
+                                <div class="bg-gradient-to-br from-[var(--axure-color)] to-red-600 p-6 rounded-xl mb-3 mx-auto" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-exchange-alt text-white text-2xl"></i>
+                                </div>
+                                <p class="text-[var(--text-primary)] font-semibold">Dynamic Interactions</p>
+                                <p class="text-[var(--text-secondary)] text-sm mt-1">Conditional logic & variables</p>
+                            </div>
+                            <div>
+                                <div class="bg-gradient-to-br from-[var(--axure-color)] to-red-600 p-6 rounded-xl mb-3 mx-auto" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-layer-group text-white text-2xl"></i>
+                                </div>
+                                <p class="text-[var(--text-primary)] font-semibold">Master Pages</p>
+                                <p class="text-[var(--text-secondary)] text-sm mt-1">Reusable components</p>
+                            </div>
+                            <div>
+                                <div class="bg-gradient-to-br from-[var(--axure-color)] to-red-600 p-6 rounded-xl mb-3 mx-auto" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-table text-white text-2xl"></i>
+                                </div>
+                                <p class="text-[var(--text-primary)] font-semibold">Data Tables</p>
+                                <p class="text-[var(--text-secondary)] text-sm mt-1">Dynamic data display</p>
+                            </div>
+                            <div>
+                                <div class="bg-gradient-to-br from-[var(--axure-color)] to-red-600 p-6 rounded-xl mb-3 mx-auto" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-comments text-white text-2xl"></i>
+                                </div>
+                                <p class="text-[var(--text-primary)] font-semibold">Annotations</p>
+                                <p class="text-[var(--text-secondary)] text-sm mt-1">Detailed specifications</p>
+                            </div>
+                            <div>
+                                <div class="bg-gradient-to-br from-[var(--axure-color)] to-red-600 p-6 rounded-xl mb-3 mx-auto" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                                </div>
+                                <p class="text-[var(--text-primary)] font-semibold">Adaptive Views</p>
+                                <p class="text-[var(--text-secondary)] text-sm mt-1">Responsive designs</p>
+                            </div>
+                            <div>
+                                <div class="bg-gradient-to-br from-[var(--axure-color)] to-red-600 p-6 rounded-xl mb-3 mx-auto" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-share-alt text-white text-2xl"></i>
+                                </div>
+                                <p class="text-[var(--text-primary)] font-semibold">Collaboration</p>
+                                <p class="text-[var(--text-secondary)] text-sm mt-1">Team projects & review</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education Section -->
+        <section id="experience" class="py-20 md:py-32">
+            <div class="container">
+                <h2 class="text-4xl font-bold text-[var(--text-primary)] mb-10 text-center">Experience & Education</h2>
+                <div class="relative pl-6 md:pl-0">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-3 md:left-1/2 w-0.5 h-full bg-gradient-to-b from-[var(--accent)] to-[var(--axure-color)] -translate-x-1/2"></div>
+                    
+                    <!-- Timeline Items -->
+                    <div class="timeline-item mb-12 flex flex-col md:flex-row justify-between items-start md:items-center w-full">
+                        <div class="timeline-content md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0 p-6 rounded-xl">
+                            <h3 class="text-2xl font-semibold text-[var(--text-primary)]">BSc (Hons) in Computer Science (R), Physical Sciences</h3>
+                            <p class="text-[var(--accent)] font-medium">University of Jaffna | Oct 2022 - Present</p>
+                            <p class="text-[var(--text-secondary)] mt-2">Specializing in AI/ML, Human-Computer Interaction & UI/UX Design</p>
+                        </div>
+                        <div class="absolute left-3 md:left-1/2 w-6 h-6 bg-[var(--accent)] rounded-full -translate-x-1/2 border-4 border-[var(--primary-bg)]"></div>
+                        <div class="md:w-1/2 pl-12 md:pl-12"></div>
+                    </div>
+
+                    <div class="timeline-item mb-12 flex flex-col md:flex-row justify-between items-start md:items-center w-full">
+                        <div class="timeline-content md:w-1/2 md:pl-12 md:order-2 p-6 rounded-xl">
+                            <h3 class="text-2xl font-semibold text-[var(--text-primary)]">Information Communication Technology Technician</h3>
+                            <p class="text-[var(--axure-color)] font-medium">Road Development Authority | Jan 2022 - Jul 2022</p>
+                            <p class="text-[var(--text-secondary)] mt-2">UI/UX research & analysis, system design, hybrid role in Batticaloa, Sri Lanka</p>
+                        </div>
+                        <div class="absolute left-3 md:left-1/2 w-6 h-6 bg-[var(--axure-color)] rounded-full -translate-x-1/2 md:order-1 border-4 border-[var(--primary-bg)]"></div>
+                        <div class="md:w-1/2 pr-12 md:pr-12 md:order-1 md:text-right"></div>
+                    </div>
+
+                    <div class="timeline-item mb-12 flex flex-col md:flex-row justify-between items-start md:items-center w-full">
+                        <div class="timeline-content md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0 p-6 rounded-xl">
+                            <h3 class="text-2xl font-semibold text-[var(--text-primary)]">ICT Technician (NVQ Level 4)</h3>
+                            <p class="text-[var(--accent)] font-medium">Dept. of Technical Education | Mar 2021 - Jan 2022</p>
+                            <p class="text-[var(--text-secondary)] mt-2">UI/UX principles & design thinking integrated into technical training</p>
+                        </div>
+                        <div class="absolute left-3 md:left-1/2 w-6 h-6 bg-[var(--accent)] rounded-full -translate-x-1/2 border-4 border-[var(--primary-bg)]"></div>
+                        <div class="md:w-1/2 pl-12 md:pl-12"></div>
+                    </div>
+
+                    <!-- Added UI/UX Design Experience -->
+                    <div class="timeline-item mb-12 flex flex-col md:flex-row justify-between items-start md:items-center w-full">
+                        <div class="timeline-content md:w-1/2 md:pl-12 md:order-2 p-6 rounded-xl">
+                            <h3 class="text-2xl font-semibold text-[var(--text-primary)]">UI/UX Design Projects</h3>
+                            <p class="text-[var(--axure-color)] font-medium">Freelance & Academic | 2021 - Present</p>
+                            <p class="text-[var(--text-secondary)] mt-2">Multiple projects using Axure RP for complex prototyping, user research, and interface design</p>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                                <span class="bg-[var(--axure-color)] bg-opacity-20 text-[var(--axure-color)] text-xs px-2 py-1 rounded">Axure RP</span>
+                                <span class="bg-[var(--accent)] bg-opacity-20 text-[var(--accent)] text-xs px-2 py-1 rounded">User Research</span>
+                                <span class="bg-[var(--accent-secondary)] bg-opacity-20 text-[var(--accent-secondary)] text-xs px-2 py-1 rounded">Prototyping</span>
+                            </div>
+                        </div>
+                        <div class="absolute left-3 md:left-1/2 w-6 h-6 bg-[var(--axure-color)] rounded-full -translate-x-1/2 md:order-1 border-4 border-[var(--primary-bg)]"></div>
+                        <div class="md:w-1/2 pr-12 md:pr-12 md:order-1 md:text-right"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-32 bg-[var(--secondary-bg)]">
+            <div class="container">
+                <h2 class="text-4xl font-bold text-[var(--text-primary)] mb-10 text-center">Get In Touch</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Enhanced Contact Form -->
+                    <form class="contact-card">
+                        <div class="mb-4">
+                            <label for="name" class="block text-[var(--text-secondary)] font-semibold mb-2">Name</label>
+                            <input type="text" id="name" class="w-full bg-[var(--tertiary-bg)] text-[var(--text-primary)] border border-[var(--secondary-bg)] rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]" placeholder="Your Name">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-[var(--text-secondary)] font-semibold mb-2">Email</label>
+                            <input type="email" id="email" class="w-full bg-[var(--tertiary-bg)] text-[var(--text-primary)] border border-[var(--secondary-bg)] rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]" placeholder="your@email.com">
+                        </div>
+                        <div class="mb-4">
+                            <label for="service" class="block text-[var(--text-secondary)] font-semibold mb-2">Service Interested In</label>
+                            <select id="service" class="w-full bg-[var(--tertiary-bg)] text-[var(--text-primary)] border border-[var(--secondary-bg)] rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]">
+                                <option value="">Select a service</option>
+                                <option value="ai">AI/ML Development</option>
+                                <option value="axure">Axure RP UI/UX Design</option>
+                                <option value="both">Combined AI & UI/UX</option>
+                                <option value="consultation">Design Consultation</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-[var(--text-secondary)] font-semibold mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full bg-[var(--tertiary-bg)] text-[var(--text-primary)] border border-[var(--secondary-bg)] rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]" placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-[var(--accent)] to-[var(--axure-color)] hover:opacity-90 text-white font-semibold py-4 rounded-lg transition-all duration-300 flex items-center justify-center">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Send Message
+                        </button>
+                    </form>
+                    
+                    <!-- Social Links -->
+                    <div class="text-center md:text-left">
+                        <h3 class="text-2xl font-bold text-[var(--text-primary)] mb-4">Connect with me</h3>
+                        <p class="text-[var(--text-secondary)] mb-6">I'm always open to discussing AI projects, Axure RP design work, or new opportunities.</p>
+                        
+                        <div class="mb-8">
+                            <h4 class="text-lg font-semibold text-[var(--text-primary)] mb-4">Quick Links</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <a href="https://github.com/NishaAnjalin" target="_blank" class="bg-[var(--tertiary-bg)] p-4 rounded-lg hover:bg-[var(--accent)] hover:text-white transition-colors duration-300 text-center">
+                                    <i class="fab fa-github text-xl mb-2"></i>
+                                    <p class="text-sm">AI Projects</p>
+                                </a>
+                                <a href="#uiux" class="bg-[var(--tertiary-bg)] p-4 rounded-lg hover:bg-[var(--axure-color)] hover:text-white transition-colors duration-300 text-center">
+                                    <i class="fas fa-mouse-pointer text-xl mb-2"></i>
+                                    <p class="text-sm">Axure Work</p>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-[var(--accent)] to-[var(--axure-color)] rounded-lg p-6">
+                            <h4 class="text-lg font-semibold text-white mb-2">Email Me Directly</h4>
+                            <a href="mailto:nishaanjalin@gmail.com" class="text-white hover:text-gray-200 flex items-center">
+                                <i class="fas fa-envelope mr-3 text-lg"></i>
+                                nishaanjalin@gmail.com
+                            </a>
+                            <p class="text-white text-sm mt-4">I typically respond within 24 hours</p>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <h4 class="text-lg font-semibold text-[var(--text-primary)] mb-3">Axure RP Projects Available</h4>
+                            <p class="text-[var(--text-secondary)] text-sm">I have several high-fidelity Axure RP prototypes available for review upon request. Contact me to see my interactive design work.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[var(--primary-bg)] py-8 text-center">
+        <div class="container">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <a href="#hero" class="text-2xl font-bold text-[var(--accent)]">Nishanthi Arulrasu</a>
+                    <p class="text-[var(--text-secondary)] text-sm mt-2">AI Developer & Axure RP Specialist</p>
+                </div>
+                
+                <div class="flex space-x-6 mb-4 md:mb-0">
+                    <a href="https://github.com/NishaAnjalin" target="_blank" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors duration-300">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/nishanthi-arulrasu-b10260279" target="_blank" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors duration-300">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="mailto:nishaanjalin@gmail.com" class="text-[var(--text-secondary)] hover:text-[var(--axure-color)] transition-colors duration-300">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-[var(--tertiary-bg)] mt-6 pt-6">
+                <p class="text-[var(--text-secondary)] text-sm">&copy; 2024 Nishanthi Arulrasu. All rights reserved. Crafted with ❤️ by Nishanthi</p>
+                <div class="mt-2 flex justify-center items-center">
+                    <span class="axure-badge text-xs">Axure RP Expert</span>
+                    <span class="mx-2 text-[var(--text-secondary)]">•</span>
+                    <span class="text-[var(--text-secondary)] text-xs">AI/ML Developer</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.add('hidden');
+        }
+        
+        mobileMenuButton.addEventListener('click', toggleMenu);
+
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const moonIcon = document.getElementById('moon-icon');
+        const sunIcon = document.getElementById('sun-icon');
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            document.body.classList.add('light-mode');
+            moonIcon.classList.add('hidden');
+            sunIcon.classList.remove('hidden');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            
+            if (document.body.classList.contains('light-mode')) {
+                moonIcon.classList.add('hidden');
+                sunIcon.classList.remove('hidden');
+                localStorage.setItem('theme', 'light');
+            } else {
+                moonIcon.classList.remove('hidden');
+                sunIcon.classList.add('hidden');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Set theme based on system preference if no saved preference
+        if (!savedTheme && window.matchMedia('(prefers-color-scheme: light)').matches) {
+            document.body.classList.add('light-mode');
+            moonIcon.classList.add('hidden');
+            sunIcon.classList.remove('hidden');
+        }
+
+        // Active navigation highlight
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        function updateActiveNav() {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (window.scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNav);
+        
+        // Form submission handling with Axure focus
+        const contactForm = document.querySelector('form');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const service = document.getElementById('service').value;
+            
+            // Create a more specific message based on service selection
+            let serviceMessage = '';
+            switch(service) {
+                case 'ai':
+                    serviceMessage = 'AI/ML Development';
+                    break;
+                case 'axure':
+                    serviceMessage = 'Axure RP UI/UX Design';
+                    break;
+                case 'both':
+                    serviceMessage = 'Combined AI & Axure RP Design project';
+                    break;
+                case 'consultation':
+                    serviceMessage = 'Design Consultation';
+                    break;
+                default:
+                    serviceMessage = 'your project';
+            }
+            
+            alert(`Thank you ${name}! I've received your inquiry about ${serviceMessage}. I'll get back to you within 24 hours with my Axure RP portfolio and project ideas.`);
+            contactForm.reset();
+        });
+
+        // Add scroll animations for elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.project-card, .skill-card, .timeline-content').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Initialize with active nav
+        updateActiveNav();
+        
+        // Highlight Axure skills on hover
+        document.querySelectorAll('.skill-axure').forEach(skill => {
+            skill.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.1) rotate(2deg)';
+            });
+            skill.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) rotate(0deg)';
+            });
+        });
+    </script>
+</body>
+</html>
