@@ -83,9 +83,19 @@
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
+            width: 100%;
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        /* Scrolled Header Optimization */
+        header.scrolled nav {
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .theme-toggle {
@@ -430,10 +440,14 @@
                         </div>
                     </div>
                     <div class="order-1 md:order-2 flex justify-center">
-                        <div class="relative group">
-                            <div class="absolute -inset-1 bg-gradient-to-r from-[var(--accent)] to-purple-600 rounded-[2.5rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-                            <img src="Nisha.jpeg" alt="Nishanthi Arulrasu"
-                                class="relative rounded-[2rem] shadow-2xl w-full max-w-sm aspect-[4/5] object-cover border-8 border-[var(--card-bg)] grayscale-[30%] hover:grayscale-0 transition-all duration-700">
+                        <div class="relative group w-64 h-80 sm:w-72 sm:h-96 md:w-80 md:h-[28rem] lg:w-[24rem] lg:h-[30rem]">
+                            <!-- Premium Border Layer -->
+                            <div class="absolute inset-0 bg-gradient-to-tr from-[var(--accent)] to-purple-600 rounded-[3rem] rotate-6 opacity-20 blur-sm group-hover:rotate-12 transition-transform duration-700"></div>
+                            <div class="absolute inset-0 border-2 border-[var(--accent)] rounded-[3rem] -rotate-3 opacity-30 group-hover:-rotate-6 transition-transform duration-700"></div>
+                            
+                            <img src="Nisha.jpeg" 
+                                 alt="Nishanthi Arulrasu" 
+                                 class="relative w-full h-full object-cover rounded-[3rem] shadow-2xl border-4 border-[var(--card-bg)] group-hover:scale-[1.02] transition-transform duration-700 grayscale-[20%] hover:grayscale-0">
                         </div>
                     </div>
                 </div>
