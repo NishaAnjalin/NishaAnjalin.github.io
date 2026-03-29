@@ -1636,7 +1636,10 @@
             });
         }
 
-        window.addEventListener('scroll', updateActiveNav);
+        window.addEventListener('scroll', () => {
+            handleScroll();
+            updateActiveNav();
+        });
 
         // Form submission handling
         const contactForm = document.querySelector('form');
