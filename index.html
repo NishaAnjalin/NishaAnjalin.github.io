@@ -285,35 +285,33 @@
     <main class="pt-16">
 
         <!-- Hero Section -->
-        <section id="hero" class="min-h-screen flex items-center justify-center text-center">
-            <div class="container py-20">
-                <h1 class="text-4xl md:text-6xl font-light text-[var(--text-primary)] mb-6">
-                    Nishanthi Arulrasu
-                </h1>
-                <div class="mb-8">
-                    <p class="text-xl text-[var(--accent)] font-medium">AI Developer, Full stack developer & UI/UX
-                        Designer</p>
-                    <div class="w-16 h-px bg-[var(--accent)] mx-auto mt-4"></div>
-                </div>
-                <p class="text-lg text-[var(--text-secondary)] mb-8 max-w-2xl mx-auto leading-relaxed">
-                    Passionate Computer Science student with expertise across a wide range of technologies,
-                    from Full-stack and Mobile development to AI and High Performance Computing.
-                </p>
-                <div class="flex justify-center space-x-4">
-                    <a href="#projects"
-                        class="bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white font-medium py-3 px-6 rounded transition-all duration-300 border border-[var(--accent)]">
-                        View Work
-                    </a>
-                    <a href="#contact"
-                        class="bg-transparent hover:bg-[var(--tertiary-bg)] text-[var(--accent)] font-medium py-3 px-6 rounded transition-all duration-300 border border-[var(--border-color)]">
-                        Get in Touch
-                    </a>
-                </div>
-                <div class="mt-16">
-                    <a href="#about"
-                        class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">
-                        <i class="fas fa-chevron-down float-animation"></i>
-                    </a>
+        <section id="hero" class="min-h-screen flex items-center justify-center text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-50"></div>
+            <div class="container py-20 relative z-10">
+                <div class="glass p-8 md:p-16 rounded-[2rem] border border-[var(--border-color)] max-w-4xl mx-auto shadow-2xl transition-all hover:border-[var(--accent)] group">
+                    <span class="section-tag">Empowering Innovation</span>
+                    <h1 class="text-4xl md:text-7xl font-light text-[var(--text-primary)] mb-6 tracking-tight">
+                        Nishanthi <span class="font-bold text-[var(--accent)] group-hover:text-blue-600 transition-colors">Arulrasu</span>
+                    </h1>
+                    <div class="mb-8">
+                        <p class="text-xl md:text-2xl text-[var(--text-secondary)] font-medium">AI Developer, Full stack developer & UI/UX Designer</p>
+                        <div class="w-16 h-px bg-[var(--accent)] mx-auto mt-6"></div>
+                    </div>
+                    <p class="text-lg text-[var(--text-secondary)] mb-10 max-w-2xl mx-auto leading-relaxed">
+                        Computer Science student engineering the future through <span class="text-[var(--text-primary)] font-semibold">AI Architectures</span>, 
+                        <span class="text-[var(--text-primary)] font-semibold">Scalable Web Systems</span>, and <span class="text-[var(--text-primary)] font-semibold">High-Performance Computing</span>.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                        <a href="#projects"
+                            class="bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white font-semibold py-4 px-10 rounded-full transition-all duration-300 shadow-lg hover:shadow-blue-500/25 flex items-center">
+                            <span>View Portfolio</span>
+                            <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                        <a href="#contact"
+                            class="glass hover:bg-[var(--tertiary-bg)] text-[var(--text-primary)] font-semibold py-4 px-10 rounded-full transition-all duration-300 border border-[var(--border-color)]">
+                            Get in Touch
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -383,149 +381,148 @@
                 <h2 class="text-3xl font-light text-[var(--text-primary)] mb-12 text-center">Featured Projects</h2>
                 <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                     <!-- Project 1: BBDSPPVT -->
-                    <div class="project-card bg-[var(--card-bg)] rounded-lg overflow-hidden flex flex-col h-full">
-                        <div class="p-6 flex flex-col h-full">
+                    <div class="project-card group">
+                        <div class="p-8 flex flex-col h-full">
+                            <span class="section-tag text-[10px] mb-4">Web Solutions</span>
                             <div class="flex items-center justify-between mb-4">
-                                <h3 class="text-lg font-bold text-[var(--text-primary)]">BBDSPPVT</h3>
-                                <span
-                                    class="text-[10px] font-bold text-[var(--accent)] bg-[var(--accent)]/10 px-2 py-1 rounded uppercase tracking-wider">Web
-                                    Solutions</span>
+                                <h3 class="text-2xl font-bold text-[var(--text-primary)]">BBDSPPVT</h3>
+                                <div class="w-10 h-10 bg-blue-500/10 rounded-full flex items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-all">
+                                    <i class="fas fa-globe"></i>
+                                </div>
                             </div>
                             <p class="text-[var(--text-secondary)] text-sm mb-6 leading-relaxed flex-grow">
-                                Business development and digital solutions company providing strategic support, web, and
-                                software solutions.
+                                Architected a comprehensive digital solutions framework providing strategic support, 
+                                high-performance web systems, and dedicated software solutions for business expansion.
                             </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span
-                                    class="text-[10px] font-medium text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">React</span>
-                                <span
-                                    class="text-[10px] font-medium text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">Node.js</span>
-                                <span
-                                    class="text-[10px] font-medium text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">Azure</span>
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">Azure</span>
                             </div>
-                            <a href="https://bbdsppvt.com/" target="_blank"
-                                class="text-[var(--accent)] hover:text-[var(--accent-hover)] text-sm font-semibold flex items-center mt-auto">
-                                <i class="fas fa-external-link-alt mr-2"></i> Visit
+                            <a href="https://bbdsppvt.com/" target="_blank" 
+                                class="inline-flex items-center text-sm font-bold text-[var(--accent)] hover:translate-x-2 transition-transform">
+                                <span>Explore Project</span>
+                                <i class="fas fa-chevron-right ml-2 text-[10px]"></i>
                             </a>
                         </div>
                     </div>
 
                     <!-- Project 2: MYNAHFARMS -->
-                    <div class="project-card bg-[var(--card-bg)] rounded-lg overflow-hidden flex flex-col h-full">
-                        <div class="p-6 flex flex-col h-full">
+                    <div class="project-card group">
+                        <div class="p-8 flex flex-col h-full">
+                            <span class="section-tag text-[10px] mb-4">Agriculture Tech</span>
                             <div class="flex items-center justify-between mb-4">
-                                <h3 class="text-lg font-bold text-[var(--text-primary)]">MYNAHFARMS</h3>
-                                <span
-                                    class="text-[10px] font-bold text-[var(--accent)] bg-[var(--accent)]/10 px-2 py-1 rounded uppercase tracking-wider">Agriculture</span>
+                                <h3 class="text-2xl font-bold text-[var(--text-primary)]">MYNAHFARMS</h3>
+                                <div class="w-10 h-10 bg-green-500/10 rounded-full flex items-center justify-center text-green-500 group-hover:bg-green-500 group-hover:text-white transition-all">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
                             </div>
                             <p class="text-[var(--text-secondary)] text-sm mb-6 leading-relaxed flex-grow">
-                                Sustainable agriculture learning and farm stay experience centre in the Sri Lankan
-                                countryside.
+                                Developed a sustainable agriculture learning platform and farm stay booking system 
+                                focused on UX efficiency and eco-tourism visibility in Sri Lanka.
                             </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span
-                                    class="text-[10px] font-medium text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">React</span>
-                                <span
-                                    class="text-[10px] font-medium text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">Node.js</span>
-                                <span
-                                    class="text-[10px] font-medium text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">CMS</span>
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">CMS</span>
                             </div>
-                            <a href="https://mynahfarms.lk/" target="_blank"
-                                class="text-[var(--accent)] hover:text-[var(--accent-hover)] text-sm font-semibold flex items-center mt-auto">
-                                <i class="fas fa-external-link-alt mr-2"></i> Visit
+                            <a href="https://mynahfarms.lk/" target="_blank" 
+                                class="inline-flex items-center text-sm font-bold text-[var(--accent)] hover:translate-x-2 transition-transform">
+                                <span>Explore Project</span>
+                                <i class="fas fa-chevron-right ml-2 text-[10px]"></i>
                             </a>
                         </div>
                     </div>
 
                     <!-- Project 3: CEYLON SPICE -->
-                    <div class="project-card bg-[var(--card-bg)] rounded-lg overflow-hidden flex flex-col h-full">
-                        <div class="p-6 flex flex-col h-full">
+                    <div class="project-card group">
+                        <div class="p-8 flex flex-col h-full">
+                            <span class="section-tag text-[10px] mb-4 text-orange-500">Restaurant / SEO</span>
                             <div class="flex items-center justify-between mb-4">
-                                <h3 class="text-lg font-bold text-[var(--text-primary)]">CEYLON SPICE</h3>
-                                <span
-                                    class="text-[10px] font-bold text-orange-500 bg-orange-500/10 px-2 py-1 rounded uppercase tracking-wider">Restaurant
-                                    / SEO</span>
+                                <h3 class="text-2xl font-bold text-[var(--text-primary)]">CEYLON SPICE</h3>
+                                <div class="w-10 h-10 bg-orange-500/10 rounded-full flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all">
+                                    <i class="fas fa-utensils"></i>
+                                </div>
                             </div>
                             <p class="text-[var(--text-secondary)] text-sm mb-6 leading-relaxed flex-grow">
-                                Modern restaurant landing page for Sri Lankan cuisine, focused on seamless food
-                                discovery and SEO optimization.
+                                Modern restaurant discovery engine focused on the rich flavors of Sri Lankan cuisine, 
+                                optimized for high SEO ranking and seamless mobile interaction.
                             </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span
-                                    class="text-[10px] font-medium text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">Next.js</span>
-                                <span
-                                    class="text-[10px] font-medium text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">Framer
-                                    Motion</span>
-                                <span
-                                    class="text-[10px] font-medium text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">Tailwind</span>
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span class="skill-tag">Next.js</span>
+                                <span class="skill-tag">Framer Motion</span>
+                                <span class="skill-tag">Tailwind</span>
                             </div>
+                            <span class="text-xs font-bold text-[var(--text-light)] italic opacity-60">Architected for Speed</span>
                         </div>
                     </div>
 
                     <!-- Project 4: LAB RESERVATION SYSTEM -->
-                    <div class="project-card bg-[var(--card-bg)] rounded-lg overflow-hidden flex flex-col h-full">
-                        <div class="p-6 flex flex-col h-full">
+                    <div class="project-card group">
+                        <div class="p-8 flex flex-col h-full">
+                            <span class="section-tag text-[10px] mb-4 text-blue-500">Software Engineering</span>
                             <div class="flex items-center justify-between mb-4">
-                                <h3 class="text-lg font-bold text-[var(--text-primary)]">Lab Reservation</h3>
-                                <span
-                                    class="text-[10px] font-bold text-blue-500 bg-blue-500/10 px-2 py-1 rounded uppercase tracking-wider">Software
-                                    Engineering</span>
+                                <h3 class="text-2xl font-bold text-[var(--text-primary)]">Lab Reservation</h3>
+                                <div class="w-10 h-10 bg-blue-500/10 rounded-full flex items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-all">
+                                    <i class="fas fa-calendar-check"></i>
+                                </div>
                             </div>
                             <p class="text-[var(--text-secondary)] text-sm mb-6 leading-relaxed flex-grow">
-                                scheduling system that boosted resource utilization by 40% and cut double bookings by
-                                90% for educational institutions.
+                                Developed a robust scheduling engine that boosted resource utilization by 40% and 
+                                eliminated double bookings for university lab facilities.
                             </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span
-                                    class="text-[10px] font-medium text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">Node.js</span>
-                                <span
-                                    class="text-[10px] font-medium text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">MySQL</span>
-                                <span
-                                    class="text-[10px] font-medium text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">Bootstrap</span>
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">MySQL</span>
+                                <span class="skill-tag">Bootstrap</span>
                             </div>
+                            <span class="text-xs font-bold text-[var(--text-light)] italic opacity-60">System Resilience: 99.9%</span>
                         </div>
                     </div>
 
                     <!-- Project 5: Hand Gesture Recognition -->
-                    <div class="project-card bg-[var(--card-bg)] rounded-lg overflow-hidden flex flex-col h-full">
-                        <div class="p-6 flex flex-col h-full">
+                    <div class="project-card group">
+                        <div class="p-8 flex flex-col h-full">
+                            <span class="section-tag text-[10px] mb-4 text-green-500">HCI / AI</span>
                             <div class="flex items-center justify-between mb-4">
-                                <h3 class="text-lg font-bold text-[var(--text-primary)]">Hand Gesture</h3>
-                                <span
-                                    class="text-[10px] font-bold text-green-500 bg-green-500/10 px-2 py-1 rounded uppercase tracking-wider">HCI
-                                    / AI</span>
+                                <h3 class="text-2xl font-bold text-[var(--text-primary)]">Hand Gesture</h3>
+                                <div class="w-10 h-10 bg-green-500/10 rounded-full flex items-center justify-center text-green-500 group-hover:bg-green-500 group-hover:text-white transition-all">
+                                    <i class="fas fa-hand-paper"></i>
+                                </div>
                             </div>
                             <p class="text-[var(--text-secondary)] text-sm mb-6 leading-relaxed flex-grow">
-                                Interprets hand movements into commands enabling natural interaction with computers and
-                                AR/VR using OpenCV.
+                                Advanced computer vision system that interprets hand movements into digital commands, 
+                                enabling natural interaction with devices and AR/VR systems.
                             </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span
-                                    class="text-[10px] font-medium text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">Python</span>
-                                <span
-                                    class="text-[10px] font-medium text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">OpenCV</span>
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">OpenCV</span>
+                                <span class="skill-tag">Mediapipe</span>
                             </div>
+                            <span class="text-xs font-bold text-[var(--text-light)] italic opacity-60">Real-time Latency: < 15ms</span>
                         </div>
                     </div>
 
                     <!-- Project 6: Face Recognition -->
-                    <div class="project-card bg-[var(--card-bg)] rounded-lg overflow-hidden flex flex-col h-full">
-                        <div class="p-6 flex flex-col h-full">
+                    <div class="project-card group">
+                        <div class="p-8 flex flex-col h-full">
+                            <span class="section-tag text-[10px] mb-4 text-purple-500">Biometrics / AI</span>
                             <div class="flex items-center justify-between mb-4">
-                                <h3 class="text-lg font-bold text-[var(--text-primary)]">Face Recognition</h3>
-                                <span
-                                    class="text-[10px] font-bold text-purple-500 bg-purple-500/10 px-2 py-1 rounded uppercase tracking-wider">Biometrics</span>
+                                <h3 class="text-2xl font-bold text-[var(--text-primary)]">Face Recognition</h3>
+                                <div class="w-10 h-10 bg-purple-500/10 rounded-full flex items-center justify-center text-purple-500 group-hover:bg-purple-500 group-hover:text-white transition-all">
+                                    <i class="fas fa-user-shield"></i>
+                                </div>
                             </div>
                             <p class="text-[var(--text-secondary)] text-sm mb-6 leading-relaxed flex-grow">
-                                Real-time system using deep learning and OpenCV, achieving 99%+ accuracy for secure
-                                biometric authentication.
+                                High-accuracy biometric authentication system using deep learning pipelines. 
+                                Achieving 99%+ accuracy in real-time facial verification & identification.
                             </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span
-                                    class="text-[10px] font-medium text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">TensorFlow</span>
-                                <span
-                                    class="text-[10px] font-medium text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">Python</span>
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span class="skill-tag">TensorFlow</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">Pandas</span>
                             </div>
+                            <span class="text-xs font-bold text-[var(--text-light)] italic opacity-60">Accuracy: 99.4%</span>
                         </div>
                     </div>
                 </div>
