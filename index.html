@@ -1439,68 +1439,104 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20 md:py-28 bg-[var(--secondary-bg)] reveal">
-            <div class="container">
-                <h2 class="text-3xl font-light text-[var(--text-primary)] mb-12 text-center">Get in Touch</h2>
-                <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-                    <!-- Contact Form -->
-                    <form class="contact-card">
-                        <div class="mb-6">
-                            <label for="name"
-                                class="block text-sm font-medium text-[var(--text-primary)] mb-2">Name</label>
-                            <input type="text" id="name"
-                                class="w-full bg-transparent text-[var(--text-primary)] border border-[var(--border-color)] rounded px-4 py-3 focus:outline-none focus:border-[var(--accent)] transition-colors duration-300"
-                                placeholder="Your name">
-                        </div>
-                        <div class="mb-6">
-                            <label for="email"
-                                class="block text-sm font-medium text-[var(--text-primary)] mb-2">Email</label>
-                            <input type="email" id="email"
-                                class="w-full bg-transparent text-[var(--text-primary)] border border-[var(--border-color)] rounded px-4 py-3 focus:outline-none focus:border-[var(--accent)] transition-colors duration-300"
-                                placeholder="your@email.com">
-                        </div>
-                        <div class="mb-6">
-                            <label for="message"
-                                class="block text-sm font-medium text-[var(--text-primary)] mb-2">Message</label>
-                            <textarea id="message" rows="4"
-                                class="w-full bg-transparent text-[var(--text-primary)] border border-[var(--border-color)] rounded px-4 py-3 focus:outline-none focus:border-[var(--accent)] transition-colors duration-300"
-                                placeholder="Your message..."></textarea>
-                        </div>
-                        <button type="submit"
-                            class="w-full bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white font-medium py-3 rounded transition-colors duration-300 border border-[var(--accent)]">
-                            Send Message
-                        </button>
-                    </form>
-
-                    <!-- Contact Info -->
-                    <div>
-                        <h3 class="text-xl font-medium text-[var(--text-primary)] mb-6">Contact Information</h3>
-                        <div class="space-y-6">
-                            <div>
-                                <h4 class="text-sm font-medium text-[var(--text-primary)] mb-2">Email</h4>
-                                <a href="mailto:nishaanjalin@gmail.com"
-                                    class="text-[var(--accent)] hover:text-[var(--accent-hover)] transition-colors duration-300">
-                                    nishaanjalin@gmail.com
-                                </a>
+        <section id="contact" class="py-24 md:py-32 bg-[var(--primary-bg)] reveal">
+            <div class="container overflow-visible">
+                <div class="max-w-4xl mx-auto text-center mb-20">
+                    <span class="section-tag">Let's Connect</span>
+                    <h2 class="text-4xl font-black text-[var(--text-primary)] tracking-tight">Get in Touch</h2>
+                    <p class="text-[var(--text-secondary)] mt-4 max-w-lg mx-auto leading-relaxed">Currently open to collaborations on <span class="text-[var(--text-primary)] font-bold">AI Engineering</span> and <span class="text-[var(--text-primary)] font-bold">Full-Stack Architectures</span>.</p>
+                </div>
+                
+                <div class="grid lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
+                    <!-- Contact Form Card -->
+                    <div class="lg:col-span-3 card-premium p-10 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[var(--accent)]/5 -mr-16 -mt-16 rounded-full group-hover:bg-[var(--accent)]/10 transition-colors"></div>
+                        <h3 class="text-xl font-bold text-[var(--text-primary)] mb-8 flex items-center">
+                            <i class="fas fa-envelope-open-text mr-3 text-[var(--accent)]"></i> Send me a Message
+                        </h3>
+                        
+                        <form class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-[10px] uppercase font-bold text-[var(--text-secondary)] mb-2 tracking-widest">Full Name</label>
+                                    <input type="text" id="name" required
+                                        class="w-full bg-[var(--tertiary-bg)]/50 text-[var(--text-primary)] border border-[var(--border-color)] rounded-xl px-4 py-4 focus:outline-none focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent)]/10 transition-all placeholder:text-[var(--text-light)]/40"
+                                        placeholder="Nishanthi Arulrasu">
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] uppercase font-bold text-[var(--text-secondary)] mb-2 tracking-widest">Email Address</label>
+                                    <input type="email" id="email" required
+                                        class="w-full bg-[var(--tertiary-bg)]/50 text-[var(--text-primary)] border border-[var(--border-color)] rounded-xl px-4 py-4 focus:outline-none focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent)]/10 transition-all placeholder:text-[var(--text-light)]/40"
+                                        placeholder="hello@example.com">
+                                </div>
                             </div>
                             <div>
-                                <h4 class="text-sm font-medium text-[var(--text-primary)] mb-2">Connect</h4>
-                                <div class="flex space-x-4">
-                                    <a href="https://github.com/NishaAnjalin" target="_blank" class="social-icon">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/nishanthi-arulrasu-b10260279" target="_blank"
-                                        class="social-icon">
-                                        <i class="fab fa-linkedin"></i>
+                                <label class="block text-[10px] uppercase font-bold text-[var(--text-secondary)] mb-2 tracking-widest">Message</label>
+                                <textarea id="message" rows="5" required
+                                    class="w-full bg-[var(--tertiary-bg)]/50 text-[var(--text-primary)] border border-[var(--border-color)] rounded-xl px-4 py-4 focus:outline-none focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent)]/10 transition-all placeholder:text-[var(--text-light)]/40 resize-none"
+                                    placeholder="Tell me about your project..."></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-gradient-to-r from-[var(--accent)] to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-black uppercase tracking-widest py-5 rounded-2xl transition-all shadow-[0_20px_40px_-12px_rgba(37,99,235,0.4)] hover:shadow-blue-500/40 hover:-translate-y-1 active:scale-[0.98] flex items-center justify-center group/btn">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane ml-3 text-xs opacity-50 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Details Side -->
+                    <div class="lg:col-span-2 space-y-6">
+                        <!-- Direct Email Card -->
+                        <div class="card-premium p-8 border-l-4 border-[var(--accent)]">
+                            <h4 class="text-[10px] font-black uppercase text-[var(--text-secondary)] tracking-widest mb-4">Direct Connection</h4>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-[var(--accent)]/10 rounded-xl flex items-center justify-center text-[var(--accent)] text-xl">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] text-[var(--text-secondary)] font-bold mb-1">Email Me At</p>
+                                    <a href="mailto:nishaanjalin@gmail.com" class="text-md font-bold text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors">
+                                        nishaanjalin@gmail.com
                                     </a>
                                 </div>
                             </div>
-                            <div class="pt-6 border-t border-[var(--border-color)]">
-                                <p class="text-sm text-[var(--text-secondary)]">
-                                    I'm currently open to collaborations and new opportunities. Feel free to reach out
-                                    if you'd like to discuss a project or just say hello.
-                                </p>
+                        </div>
+
+                        <!-- Professional Networks -->
+                        <div class="card-premium p-8 border-l-4 border-blue-600">
+                            <h4 class="text-[10px] font-black uppercase text-[var(--text-secondary)] tracking-widest mb-4">Professional Link</h4>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-blue-600/10 rounded-xl flex items-center justify-center text-blue-600 text-xl">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] text-[var(--text-secondary)] font-bold mb-1">LinkedIn Network</p>
+                                    <a href="https://www.linkedin.com/in/nishanthi-arulrasu-b10260279" target="_blank" class="text-md font-bold text-[var(--text-primary)] hover:text-blue-600 transition-colors">
+                                        Nishanthi Arulrasu
+                                    </a>
+                                </div>
                             </div>
+                        </div>
+
+                        <!-- Technical Repository Card -->
+                        <div class="card-premium p-8 border-l-4 border-gray-600">
+                            <h4 class="text-[10px] font-black uppercase text-[var(--text-secondary)] tracking-widest mb-4">Source Code</h4>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-gray-600/10 rounded-xl flex items-center justify-center text-[var(--text-primary)] text-xl">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] text-[var(--text-secondary)] font-bold mb-1">GitHub Portfolio</p>
+                                    <a href="https://github.com/NishaAnjalin" target="_blank" class="text-md font-bold text-[var(--text-primary)] hover:opacity-70 transition-opacity">
+                                        @NishaAnjalin
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Note -->
+                        <div class="p-6 bg-[var(--accent)]/5 rounded-3xl border border-[var(--accent)]/10 text-center">
+                            <p class="text-xs text-[var(--text-secondary)] italic leading-relaxed">"Passionate about building the future through <span class="text-[var(--text-primary)] font-bold">clean code</span> and <span class="text-[var(--text-primary)] font-bold">intelligent systems</span>. Looking forward to hearing from you!"</p>
                         </div>
                     </div>
                 </div>
