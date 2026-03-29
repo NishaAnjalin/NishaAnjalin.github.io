@@ -376,9 +376,12 @@
         </section>
 
         <!-- About Me Section -->
-        <section id="about" class="py-20 md:py-28">
+        <section id="about" class="py-20 md:py-28 reveal">
             <div class="container">
-                <h2 class="text-3xl font-light text-[var(--text-primary)] mb-12 text-center">About</h2>
+                <div class="text-center mb-16">
+                    <span class="section-tag">Direct Introduction</span>
+                    <h2 class="text-3xl font-light text-[var(--text-primary)]">About Me</h2>
+                </div>
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="order-2 md:order-1">
                         <div class="text-lg text-[var(--text-secondary)] leading-relaxed space-y-6">
@@ -446,7 +449,7 @@
                 </div>
                 <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                     <!-- Project 1: BBDSPPVT -->
-                    <div class="project-card group">
+                    <div class="project-card group reveal">
                         <div class="p-8 flex flex-col h-full">
                             <span class="section-tag text-[10px] mb-4">Web Solutions</span>
                             <div class="flex items-center justify-between mb-4">
@@ -473,7 +476,7 @@
                     </div>
 
                     <!-- Project 2: MYNAHFARMS -->
-                    <div class="project-card group">
+                    <div class="project-card group reveal">
                         <div class="p-8 flex flex-col h-full">
                             <span class="section-tag text-[10px] mb-4">Agriculture Tech</span>
                             <div class="flex items-center justify-between mb-4">
@@ -500,7 +503,7 @@
                     </div>
 
                     <!-- Project 3: CEYLON SPICE -->
-                    <div class="project-card group">
+                    <div class="project-card group reveal">
                         <div class="p-8 flex flex-col h-full">
                             <span class="section-tag text-[10px] mb-4 text-orange-500">Restaurant / SEO</span>
                             <div class="flex items-center justify-between mb-4">
@@ -523,7 +526,7 @@
                     </div>
 
                     <!-- Project 4: LAB RESERVATION SYSTEM -->
-                    <div class="project-card group">
+                    <div class="project-card group reveal">
                         <div class="p-8 flex flex-col h-full">
                             <span class="section-tag text-[10px] mb-4 text-blue-500">Software Engineering</span>
                             <div class="flex items-center justify-between mb-4">
@@ -546,7 +549,7 @@
                     </div>
 
                     <!-- Project 5: Hand Gesture Recognition -->
-                    <div class="project-card group">
+                    <div class="project-card group reveal">
                         <div class="p-8 flex flex-col h-full">
                             <span class="section-tag text-[10px] mb-4 text-green-500">HCI / AI</span>
                             <div class="flex items-center justify-between mb-4">
@@ -569,7 +572,7 @@
                     </div>
 
                     <!-- Project 6: Face Recognition -->
-                    <div class="project-card group">
+                    <div class="project-card group reveal">
                         <div class="p-8 flex flex-col h-full">
                             <span class="section-tag text-[10px] mb-4 text-purple-500">Biometrics / AI</span>
                             <div class="flex items-center justify-between mb-4">
@@ -618,7 +621,7 @@
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
                     <!-- Category 1: Digital Languages -->
-                    <div class="space-y-8">
+                    <div class="space-y-8 reveal">
                         <div>
                             <span class="section-tag">Core Foundation</span>
                             <h3 class="text-xl font-bold text-[var(--text-primary)] mb-6 flex items-center">
@@ -652,7 +655,7 @@
                     </div>
 
                     <!-- Category 2: Frameworks & Ecosystem -->
-                    <div class="space-y-8">
+                    <div class="space-y-8 reveal">
                         <div>
                             <span class="section-tag">Development Stacks</span>
                             <h3 class="text-xl font-bold text-[var(--text-primary)] mb-6 flex items-center">
@@ -682,7 +685,7 @@
                     </div>
 
                     <!-- Category 3: AI & Data Engineering -->
-                    <div class="space-y-8">
+                    <div class="space-y-8 reveal">
                         <div>
                             <span class="section-tag">Machine Intelligence</span>
                             <h3 class="text-xl font-bold text-[var(--text-primary)] mb-6 flex items-center">
@@ -1650,6 +1653,11 @@
         handleScroll();
         updateActiveNav();
 
+        function handleScroll() {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
             }
         }
 
@@ -1658,7 +1666,6 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
-                    // observer.unobserve(entry.target); // Optional: stop observing once revealed
                 }
             });
         };
