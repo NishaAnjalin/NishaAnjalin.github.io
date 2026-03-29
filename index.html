@@ -182,6 +182,8 @@
                         class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Projects</a>
                     <a href="#skills"
                         class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Skills</a>
+                    <a href="#fullstack"
+                        class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Full-Stack</a>
                     <a href="#experience"
                         class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Experience</a>
                     <a href="#education"
@@ -219,9 +221,9 @@
                 <a href="#skills"
                     class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300"
                     onclick="closeMenu()">Skills</a>
-                <a href="#uiux"
+                <a href="#fullstack"
                     class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300"
-                    onclick="closeMenu()">UI/UX</a>
+                    onclick="closeMenu()">Full-Stack</a>
                 <a href="#experience"
                     class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300"
                     onclick="closeMenu()">Experience</a>
@@ -707,6 +709,90 @@
             </div>
         </section>
 
+        <!-- Full-Stack Development Section -->
+        <section id="fullstack" class="py-20 md:py-28 bg-[var(--primary-bg)] border-t border-[var(--border-color)]">
+            <div class="container">
+                <h2 class="text-3xl font-light text-[var(--text-primary)] mb-12 text-center">Full-Stack Architecture</h2>
+                
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <!-- Column 1: Front-End Architecture -->
+                    <div class="bg-[var(--card-bg)] p-8 rounded-xl border border-[var(--border-color)] relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-blue-500/5 -mr-8 -mt-8 rounded-full group-hover:bg-blue-500/10 transition-colors"></div>
+                        <h3 class="text-lg font-bold text-[var(--text-primary)] mb-6 flex items-center">
+                            <i class="fas fa-desktop mr-3 text-blue-500"></i> Client-Side (Front-End)
+                        </h3>
+                        <p class="text-xs text-[var(--text-secondary)] mb-6 leading-relaxed">Designing immersive user interfaces and seamless experiences using modern React-based architectures.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-sm text-[var(--text-primary)]">
+                                <i class="fas fa-check-circle mr-2 text-green-500 text-xs"></i> React / Next.js / React Native
+                            </li>
+                            <li class="flex items-center text-sm text-[var(--text-primary)]">
+                                <i class="fas fa-check-circle mr-2 text-green-500 text-xs"></i> Tailwind CSS & Responsive Design
+                            </li>
+                            <li class="flex items-center text-sm text-[var(--text-primary)]">
+                                <i class="fas fa-check-circle mr-2 text-green-500 text-xs"></i> State Management & API Consumption
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2: Back-End Architecture -->
+                    <div class="bg-[var(--card-bg)] p-8 rounded-xl border border-[var(--border-color)] relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-indigo-500/5 -mr-8 -mt-8 rounded-full group-hover:bg-indigo-500/10 transition-colors"></div>
+                        <h3 class="text-lg font-bold text-[var(--text-primary)] mb-6 flex items-center">
+                            <i class="fas fa-server mr-3 text-indigo-500"></i> Server-Side (Back-End)
+                        </h3>
+                        <p class="text-xs text-[var(--text-secondary)] mb-6 leading-relaxed">Developing robust server logic, RESTful APIs, and secure authentication systems.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-sm text-[var(--text-primary)]">
+                                <i class="fas fa-check-circle mr-2 text-green-500 text-xs"></i> Node.js / Express / Laravel
+                            </li>
+                            <li class="flex items-center text-sm text-[var(--text-primary)]">
+                                <i class="fas fa-check-circle mr-2 text-green-500 text-xs"></i> Python, PHP & ASP.NET Engineering
+                            </li>
+                            <li class="flex items-center text-sm text-[var(--text-primary)]">
+                                <i class="fas fa-check-circle mr-2 text-green-500 text-xs"></i> RESTful API & JWT Security
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Data & DevOps -->
+                    <div class="bg-[var(--card-bg)] p-8 rounded-xl border border-[var(--border-color)] relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-purple-500/5 -mr-8 -mt-8 rounded-full group-hover:bg-purple-500/10 transition-colors"></div>
+                        <h3 class="text-lg font-bold text-[var(--text-primary)] mb-6 flex items-center">
+                            <i class="fas fa-database mr-3 text-purple-500"></i> Data & Infrastructure
+                        </h3>
+                        <p class="text-xs text-[var(--text-secondary)] mb-6 leading-relaxed">Managing scalable database systems and deploying secure cloud infrastructure.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-sm text-[var(--text-primary)]">
+                                <i class="fas fa-check-circle mr-2 text-green-500 text-xs"></i> MySQL, MongoDB & Firebase
+                            </li>
+                            <li class="flex items-center text-sm text-[var(--text-primary)]">
+                                <i class="fas fa-check-circle mr-2 text-green-500 text-xs"></i> Microsoft Azure & Git Workflows
+                            </li>
+                            <li class="flex items-center text-sm text-[var(--text-primary)]">
+                                <i class="fas fa-check-circle mr-2 text-green-500 text-xs"></i> CI/CD & Performance Optimization
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Featured Stacks -->
+                <div class="mt-12 p-6 bg-[var(--secondary-bg)] rounded-lg text-center">
+                    <h4 class="text-xs font-bold text-[var(--text-secondary)] uppercase tracking-[0.2em] mb-6">Preferred Technology Stacks</h4>
+                    <div class="flex flex-wrap justify-center gap-8 md:gap-16">
+                        <div class="flex items-center space-x-3">
+                            <span class="text-xl font-black text-[var(--text-primary)] opacity-20">MERN</span>
+                            <p class="text-[10px] text-[var(--text-secondary)] text-left">MongoDB, Express,<br>React, Node.js</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-xl font-black text-[var(--text-primary)] opacity-20">LAMP</span>
+                            <p class="text-[10px] text-[var(--text-secondary)] text-left">Linux, Apache,<br>MySQL, PHP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Experience Section -->
         <section id="experience" class="py-20 md:py-28">
             <div class="container">
@@ -1023,6 +1109,8 @@
                         class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Home</a>
                     <a href="#projects"
                         class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Projects</a>
+                    <a href="#fullstack"
+                        class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Full-Stack</a>
                     <a href="#certifications"
                         class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Certifications</a>
                     <a href="#contact"
