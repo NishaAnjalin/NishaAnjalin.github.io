@@ -240,7 +240,7 @@
 
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-button"
-                    class="md:hidden text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300 focus:outline-none">
+                    class="md:hidden text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-all duration-300 focus:outline-none w-10 h-10 flex items-center justify-center rounded-xl bg-[var(--tertiary-bg)] border border-[var(--border-color)]">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -321,7 +321,21 @@
                 </div>
             </div>
             
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50 hover:opacity-100 transition-opacity">
+                <div class="w-6 h-10 border-2 border-[var(--text-secondary)] rounded-full flex justify-center p-1">
+                    <div class="w-1 h-2 bg-[var(--accent)] rounded-full animate-scroll"></div>
+                </div>
+            </div>
+            
             <style>
+                @keyframes scroll {
+                    0% { transform: translateY(0); opacity: 1; }
+                    100% { transform: translateY(15px); opacity: 0; }
+                }
+                .animate-scroll {
+                    animation: scroll 1.5s infinite;
+                }
                 @keyframes gradient {
                     0% { background-position: 0% 50%; }
                     50% { background-position: 100% 50%; }
