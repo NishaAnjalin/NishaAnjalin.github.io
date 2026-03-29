@@ -470,108 +470,124 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="py-20 md:py-28">
+        <section id="skills" class="py-20 md:py-28 bg-[var(--primary-bg)]">
             <div class="container">
-                <h2 class="text-3xl font-light text-[var(--text-primary)] mb-12 text-center">Skills</h2>
+                <h2 class="text-3xl font-light text-[var(--text-primary)] mb-16 text-center">Technical Skills</h2>
 
-                <!-- Programming Languages -->
-                <div class="mb-12">
-                    <h3 class="text-lg font-medium text-[var(--text-primary)] mb-6 flex items-center">
-                        <div class="w-3 h-3 bg-[var(--accent)] mr-3"></div>
-                        Languages
-                    </h3>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fab fa-js text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">JavaScript</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fas fa-code text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">TypeScript</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fab fa-python text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">Python</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fab fa-php text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">PHP</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <span class="text-2xl font-bold mb-2 inline-block text-[var(--text-primary)]">C++</span>
-                            <p class="text-sm text-[var(--text-primary)]">C++</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <span class="text-2xl font-bold mb-2 inline-block text-[var(--text-primary)]">C#</span>
-                            <p class="text-sm text-[var(--text-primary)]">C#</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <!-- Category 1: Core Languages -->
+                    <div class="space-y-6">
+                        <h3 class="text-lg font-medium text-[var(--accent)] flex items-center mb-6">
+                            <i class="fas fa-code mr-3"></i> Core Languages
+                        </h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center border border-[var(--border-color)]">
+                                <i class="fab fa-js text-yellow-500 text-xl mb-2"></i>
+                                <p class="text-xs font-semibold text-[var(--text-primary)]">JavaScript / TS</p>
+                            </div>
+                            <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center border border-[var(--border-color)]">
+                                <i class="fab fa-python text-blue-500 text-xl mb-2"></i>
+                                <p class="text-xs font-semibold text-[var(--text-primary)]">Python</p>
+                            </div>
+                            <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center border border-[var(--border-color)]">
+                                <i class="fab fa-php text-indigo-500 text-xl mb-2"></i>
+                                <p class="text-xs font-semibold text-[var(--text-primary)]">PHP</p>
+                            </div>
+                            <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center border border-[var(--border-color)]">
+                                <span class="text-xl font-bold mb-2 inline-block text-[var(--text-primary)]">C++/#</span>
+                                <p class="text-xs font-semibold text-[var(--text-primary)]">C++ / C#</p>
+                            </div>
+                            <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center border border-[var(--border-color)]">
+                                <i class="fab fa-html5 text-orange-500 text-xl mb-2"></i>
+                                <p class="text-xs font-semibold text-[var(--text-primary)]">HTML5 / CSS3</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Frameworks & Technologies -->
-                <div class="mb-12">
-                    <h3 class="text-lg font-medium text-[var(--text-primary)] mb-6 flex items-center">
-                        <div class="w-3 h-3 bg-[var(--accent)] mr-3"></div>
-                        Frameworks & Libraries
-                    </h3>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fab fa-react text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">React / Native</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fas fa-server text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">Next.js / Node.js</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fab fa-laravel text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">Laravel</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fas fa-terminal text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">Express</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fas fa-windows text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">ASP.NET</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fab fa-wordpress text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">WordPress</p>
+                    <!-- Category 2: Frameworks & Runtime -->
+                    <div class="space-y-6">
+                        <h3 class="text-lg font-medium text-[var(--accent)] flex items-center mb-6">
+                            <i class="fas fa-layer-group mr-3"></i> Frameworks & Runtime
+                        </h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center border border-[var(--border-color)]">
+                                <i class="fab fa-react text-blue-400 text-xl mb-2"></i>
+                                <p class="text-xs font-semibold text-[var(--text-primary)]">React / Native</p>
+                            </div>
+                            <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center border border-[var(--border-color)]">
+                                <i class="fab fa-node-js text-green-500 text-xl mb-2"></i>
+                                <p class="text-xs font-semibold text-[var(--text-primary)]">Node / Next.js</p>
+                            </div>
+                            <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center border border-[var(--border-color)]">
+                                <i class="fab fa-laravel text-red-500 text-xl mb-2"></i>
+                                <p class="text-xs font-semibold text-[var(--text-primary)]">Laravel</p>
+                            </div>
+                            <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center border border-[var(--border-color)]">
+                                <i class="fas fa-code text-blue-600 text-xl mb-2"></i>
+                                <p class="text-xs font-semibold text-[var(--text-primary)]">ASP.NET / Express</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Tools & High Performance Computing -->
-                <div class="mb-12">
-                    <h3 class="text-lg font-medium text-[var(--text-primary)] mb-6 flex items-center">
-                        <div class="w-3 h-3 bg-[var(--accent)] mr-3"></div>
-                        Specialized & Tools
-                    </h3>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fas fa-microchip text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">OpenMP / MPI</p>
+                    <!-- Category 3: AI & Data Science -->
+                    <div class="space-y-6">
+                        <h3 class="text-lg font-medium text-[var(--accent)] flex items-center mb-6">
+                            <i class="fas fa-brain mr-3"></i> AI & Data Science
+                        </h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center border border-[var(--border-color)] col-span-2">
+                                <p class="text-xs font-bold text-[var(--text-primary)] mb-2 uppercase tracking-tighter">TensorFlow | NumPy | Pandas</p>
+                                <p class="text-[10px] text-[var(--text-secondary)]">Machine Learning Libraries</p>
+                            </div>
+                            <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center border border-[var(--border-color)]">
+                                <i class="fas fa-chart-pie text-yellow-600 text-xl mb-2"></i>
+                                <p class="text-xs font-semibold text-[var(--text-primary)]">Power BI</p>
+                            </div>
+                            <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center border border-[var(--border-color)]">
+                                <i class="fas fa-database text-blue-500 text-xl mb-2"></i>
+                                <p class="text-xs font-semibold text-[var(--text-primary)]">MySQL / NoSQL</p>
+                            </div>
                         </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fas fa-chart-bar text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">Power BI</p>
+                    </div>
+
+                    <!-- Category 4: Styling & CMS -->
+                    <div class="space-y-6">
+                        <h3 class="text-lg font-medium text-[var(--accent)] flex items-center mb-6">
+                            <i class="fas fa-paint-brush mr-3"></i> Styling & CMS
+                        </h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center border border-[var(--border-color)]">
+                                <i class="fab fa-css3-alt text-blue-500 text-xl mb-2"></i>
+                                <p class="text-xs font-semibold text-[var(--text-primary)]">Tailwind CSS</p>
+                            </div>
+                            <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center border border-[var(--border-color)]">
+                                <i class="fab fa-bootstrap text-purple-600 text-xl mb-2"></i>
+                                <p class="text-xs font-semibold text-[var(--text-primary)]">Bootstrap</p>
+                            </div>
+                            <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center border border-[var(--border-color)] col-span-2">
+                                <i class="fab fa-wordpress text-blue-400 text-xl mb-2"></i>
+                                <p class="text-xs font-semibold text-[var(--text-primary)]">WordPress CMS</p>
+                            </div>
                         </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fab fa-bootstrap text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">Tailwind/Bootstrap</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fas fa-brain text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">AI/ML Tools</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fas fa-database text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">MySQL</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fab fa-git-alt text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">Git/CLI</p>
+                    </div>
+
+                    <!-- Category 5: Specialized (HPC) -->
+                    <div class="space-y-6">
+                        <h3 class="text-lg font-medium text-[var(--accent)] flex items-center mb-6">
+                            <i class="fas fa-microchip mr-3"></i> HPC & Architecture
+                        </h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center border border-[var(--border-color)]">
+                                <i class="fas fa-bolt text-yellow-500 text-xl mb-2"></i>
+                                <p class="text-xs font-semibold text-[var(--text-primary)]">OpenMP</p>
+                            </div>
+                            <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center border border-[var(--border-color)]">
+                                <i class="fas fa-network-wired text-blue-400 text-xl mb-2"></i>
+                                <p class="text-xs font-semibold text-[var(--text-primary)]">MPI</p>
+                            </div>
+                            <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center border border-[var(--border-color)] col-span-2">
+                                <p class="text-xs font-semibold text-[var(--text-primary)]">Parallel & High-Performance Computing</p>
+                            </div>
                         </div>
                     </div>
                 </div>
