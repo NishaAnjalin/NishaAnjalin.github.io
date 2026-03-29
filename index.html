@@ -285,35 +285,52 @@
     <main class="pt-16">
 
         <!-- Hero Section -->
-        <section id="hero" class="min-h-screen flex items-center justify-center text-center relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-50"></div>
+        <section id="hero" class="min-h-screen flex items-center justify-center text-center relative overflow-hidden bg-[var(--primary-bg)]">
+            <!-- Animated Dynamic Background -->
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-500/10 rounded-full blur-[120px] animate-pulse"></div>
+                <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-500/10 rounded-full blur-[120px] animate-pulse" style="animation-delay: 2s;"></div>
+            </div>
+            
             <div class="container py-20 relative z-10">
-                <div class="glass p-8 md:p-16 rounded-[2rem] border border-[var(--border-color)] max-w-4xl mx-auto shadow-2xl transition-all hover:border-[var(--accent)] group">
-                    <span class="section-tag">Empowering Innovation</span>
-                    <h1 class="text-4xl md:text-7xl font-light text-[var(--text-primary)] mb-6 tracking-tight">
-                        Nishanthi <span class="font-bold text-[var(--accent)] group-hover:text-blue-600 transition-colors">Arulrasu</span>
+                <div class="glass p-10 md:p-20 rounded-[3rem] border border-[var(--border-color)] max-w-5xl mx-auto shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] transition-all hover:border-[var(--accent)]/30 group">
+                    <span class="section-tag">Empowering Digital Transformation</span>
+                    <h1 class="text-5xl md:text-8xl font-black text-[var(--text-primary)] mb-8 tracking-tighter leading-[0.9]">
+                        Nishanthi <br>
+                        <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">Arulrasu</span>
                     </h1>
-                    <div class="mb-8">
-                        <p class="text-xl md:text-2xl text-[var(--text-secondary)] font-medium">AI Developer, Full stack developer & UI/UX Designer</p>
-                        <div class="w-16 h-px bg-[var(--accent)] mx-auto mt-6"></div>
+                    <div class="mb-10">
+                        <p class="text-xl md:text-3xl text-[var(--text-secondary)] font-medium tracking-tight">AI Developer · Full Stack Engineer · UI/UX Designer</p>
+                        <div class="w-24 h-1 bg-gradient-to-r from-transparent via-[var(--accent)] to-transparent mx-auto mt-8 opacity-50"></div>
                     </div>
-                    <p class="text-lg text-[var(--text-secondary)] mb-10 max-w-2xl mx-auto leading-relaxed">
-                        Computer Science student engineering the future through <span class="text-[var(--text-primary)] font-semibold">AI Architectures</span>, 
-                        <span class="text-[var(--text-primary)] font-semibold">Scalable Web Systems</span>, and <span class="text-[var(--text-primary)] font-semibold">High-Performance Computing</span>.
+                    <p class="text-lg md:text-xl text-[var(--text-secondary)] mb-12 max-w-3xl mx-auto leading-relaxed">
+                        Computer Science Honors student engineering the future through <span class="text-[var(--text-primary)] font-bold">Intelligent Architectures</span>, 
+                        <span class="text-[var(--text-primary)] font-bold">Scalable Systems</span>, and <span class="text-[var(--text-primary)] font-bold">High-Performance Infrastructure</span>.
                     </p>
-                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
                         <a href="#projects"
-                            class="bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white font-semibold py-4 px-10 rounded-full transition-all duration-300 shadow-lg hover:shadow-blue-500/25 flex items-center">
-                            <span>View Portfolio</span>
-                            <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                            class="bg-[var(--accent)] hover:bg-blue-700 text-white font-black py-5 px-12 rounded-2xl transition-all duration-500 shadow-[0_20px_40px_-12px_rgba(37,99,235,0.4)] hover:shadow-blue-500/40 hover:-translate-y-1 flex items-center group/btn">
+                            <span>Explore Portfolio</span>
+                            <i class="fas fa-arrow-right ml-3 text-xs group-hover/btn:translate-x-1 transition-transform"></i>
                         </a>
                         <a href="#contact"
-                            class="glass hover:bg-[var(--tertiary-bg)] text-[var(--text-primary)] font-semibold py-4 px-10 rounded-full transition-all duration-300 border border-[var(--border-color)]">
+                            class="glass hover:bg-[var(--tertiary-bg)] text-[var(--text-primary)] font-bold py-5 px-12 rounded-2xl transition-all duration-500 border border-[var(--border-color)] hover:-translate-y-1">
                             Get in Touch
                         </a>
                     </div>
                 </div>
             </div>
+            
+            <style>
+                @keyframes gradient {
+                    0% { background-position: 0% 50%; }
+                    50% { background-position: 100% 50%; }
+                    100% { background-position: 0% 50%; }
+                }
+                .animate-gradient {
+                    animation: gradient 6s ease infinite;
+                }
+            </style>
         </section>
 
         <!-- About Me Section -->
@@ -368,8 +385,11 @@
                         </div>
                     </div>
                     <div class="order-1 md:order-2 flex justify-center">
-                        <img src="Nisha.jpeg" alt="Nishanthi Arulrasu"
-                            class="rounded-2xl shadow-xl w-full max-w-md aspect-[4/5] object-cover border-4 border-[var(--border-color)]">
+                        <div class="relative group">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-[var(--accent)] to-purple-600 rounded-[2.5rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                            <img src="Nisha.jpeg" alt="Nishanthi Arulrasu"
+                                class="relative rounded-[2rem] shadow-2xl w-full max-w-sm aspect-[4/5] object-cover border-8 border-[var(--card-bg)] grayscale-[30%] hover:grayscale-0 transition-all duration-700">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -378,7 +398,10 @@
         <!-- Projects Section -->
         <section id="projects" class="py-20 md:py-28 bg-[var(--secondary-bg)]">
             <div class="container">
-                <h2 class="text-3xl font-light text-[var(--text-primary)] mb-12 text-center">Featured Projects</h2>
+                <div class="text-center mb-20">
+                    <span class="section-tag">Featured Works</span>
+                    <h2 class="text-4xl font-black text-[var(--text-primary)] tracking-tight">Engineering Excellence</h2>
+                </div>
                 <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                     <!-- Project 1: BBDSPPVT -->
                     <div class="project-card group">
