@@ -59,6 +59,12 @@
             --nav-bg: var(--dark-nav-bg);
         }
 
+        .glass {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background-color: var(--nav-bg);
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -75,18 +81,20 @@
 
         .nav-link {
             position: relative;
-            padding-bottom: 4px;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
 
         .nav-link::after {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 0;
+            bottom: -4px;
+            left: 50%;
             width: 0;
-            height: 1px;
-            background-color: var(--accent);
-            transition: width 0.3s ease;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
         }
 
         .nav-link:hover::after,
@@ -96,7 +104,6 @@
 
         .nav-link.active {
             color: var(--accent);
-            font-weight: 500;
         }
 
         /* Enhanced Contact Section */
