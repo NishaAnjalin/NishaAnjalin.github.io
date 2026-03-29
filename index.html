@@ -215,6 +215,38 @@
         .timeline-content {
             border: 1px solid var(--border-color);
         }
+
+        /* Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+
+        @keyframes shrinkHeader {
+            from { padding-top: 1.25rem; padding-bottom: 1.25rem; }
+            to { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+        }
     </style>
 </head>
 
@@ -290,20 +322,20 @@
             
             <div class="container py-20 relative z-10">
                 <div class="glass p-10 md:p-20 rounded-[3rem] border border-[var(--border-color)] max-w-5xl mx-auto shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] transition-all hover:border-[var(--accent)]/30 group">
-                    <span class="section-tag">Empowering Digital Transformation</span>
-                    <h1 class="text-5xl md:text-8xl font-black text-[var(--text-primary)] mb-8 tracking-tighter leading-[0.9]">
+                    <span class="section-tag animate-fade-in opacity-0">Empowering Digital Transformation</span>
+                    <h1 class="text-5xl md:text-8xl font-black text-[var(--text-primary)] mb-8 tracking-tighter leading-[0.9] animate-fade-in delay-100 opacity-0">
                         Nishanthi <br>
                         <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">Arulrasu</span>
                     </h1>
-                    <div class="mb-10">
+                    <div class="mb-10 animate-fade-in delay-200 opacity-0">
                         <p class="text-xl md:text-3xl text-[var(--text-secondary)] font-medium tracking-tight">AI Developer · Full Stack Engineer · UI/UX Designer</p>
                         <div class="w-24 h-1 bg-gradient-to-r from-transparent via-[var(--accent)] to-transparent mx-auto mt-8 opacity-50"></div>
                     </div>
-                    <p class="text-lg md:text-xl text-[var(--text-secondary)] mb-12 max-w-3xl mx-auto leading-relaxed">
+                    <p class="text-lg md:text-xl text-[var(--text-secondary)] mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in delay-300 opacity-0">
                         Computer Science Honors student engineering the future through <span class="text-[var(--text-primary)] font-bold">Intelligent Architectures</span>, 
                         <span class="text-[var(--text-primary)] font-bold">Scalable Systems</span>, and <span class="text-[var(--text-primary)] font-bold">High-Performance Infrastructure</span>.
                     </p>
-                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
+                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 animate-fade-in delay-400 opacity-0">
                         <a href="#projects"
                             class="bg-[var(--accent)] hover:bg-blue-700 text-white font-black py-5 px-12 rounded-2xl transition-all duration-500 shadow-[0_20px_40px_-12px_rgba(37,99,235,0.4)] hover:shadow-blue-500/40 hover:-translate-y-1 flex items-center group/btn">
                             <span>Explore Portfolio</span>
@@ -1618,13 +1650,26 @@
         handleScroll();
         updateActiveNav();
 
-        function handleScroll() {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
             }
         }
+
+        // Reveal on Scroll
+        const revealCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // observer.unobserve(entry.target); // Optional: stop observing once revealed
+                }
+            });
+        };
+
+        const revealObserver = new IntersectionObserver(revealCallback, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            revealObserver.observe(el);
+        });
     </script>
 </body>
 
