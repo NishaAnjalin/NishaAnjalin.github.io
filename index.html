@@ -186,6 +186,8 @@
                         class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">UI/UX</a>
                     <a href="#experience"
                         class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Experience</a>
+                    <a href="#education"
+                        class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Education</a>
                     <a href="#contact"
                         class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Contact</a>
                 </div>
@@ -223,6 +225,9 @@
                 <a href="#experience"
                     class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300"
                     onclick="closeMenu()">Experience</a>
+                <a href="#education"
+                    class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300"
+                    onclick="closeMenu()">Education</a>
                 <a href="#contact"
                     class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300"
                     onclick="closeMenu()">Contact</a>
@@ -610,43 +615,102 @@
         <!-- Experience Section -->
         <section id="experience" class="py-20 md:py-28">
             <div class="container">
-                <h2 class="text-3xl font-light text-[var(--text-primary)] mb-12 text-center">Experience & Education</h2>
-
+                <h2 class="text-3xl font-light text-[var(--text-primary)] mb-12 text-center">Experience</h2>
                 <div class="space-y-8 max-w-3xl mx-auto">
                     <!-- Experience 1 -->
-                    <div
-                        class="timeline-content bg-[var(--card-bg)] p-6 rounded-lg border border-[var(--border-color)]">
-                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-                            <h3 class="text-xl font-medium text-[var(--text-primary)]">BSc (Hons) Computer Science</h3>
-                            <span class="text-sm text-[var(--accent)] mt-1 sm:mt-0">2022 - Present</span>
-                        </div>
-                        <p class="text-[var(--text-secondary)] mb-3">University of Jaffna</p>
-                        <p class="text-[var(--text-secondary)] text-sm">Specializing in AI/ML and Human-Computer
-                            Interaction</p>
-                    </div>
-
-                    <!-- Experience 2 -->
-                    <div
-                        class="timeline-content bg-[var(--card-bg)] p-6 rounded-lg border border-[var(--border-color)]">
+                    <div class="timeline-content bg-[var(--card-bg)] p-6 rounded-lg border border-[var(--border-color)]">
                         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                             <h3 class="text-xl font-medium text-[var(--text-primary)]">ICT Technician</h3>
                             <span class="text-sm text-[var(--accent)] mt-1 sm:mt-0">2022</span>
                         </div>
-                        <p class="text-[var(--text-secondary)] mb-3">Road Development Authority</p>
+                        <p class="text-[var(--text-secondary)] mb-2 font-medium">Road Development Authority</p>
                         <p class="text-[var(--text-secondary)] text-sm">Confidentiality and Research Analysis, Hybrid
                             role in Batticaloa</p>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <!-- Experience 3 -->
-                    <div
-                        class="timeline-content bg-[var(--card-bg)] p-6 rounded-lg border border-[var(--border-color)]">
-                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-                            <h3 class="text-xl font-medium text-[var(--text-primary)]">ICT Technician (NVQ Level 4)</h3>
-                            <span class="text-sm text-[var(--accent)] mt-1 sm:mt-0">2021 - 2022</span>
+        <!-- Education Section -->
+        <section id="education" class="py-20 md:py-28 bg-[var(--secondary-bg)]">
+            <div class="container">
+                <h2 class="text-3xl font-light text-[var(--text-primary)] mb-12 text-center">Education</h2>
+                <div class="space-y-8 max-w-4xl mx-auto">
+                    <!-- University -->
+                    <div class="bg-[var(--card-bg)] p-8 rounded-lg border border-[var(--border-color)]">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
+                            <div>
+                                <h3 class="text-xl font-semibold text-[var(--text-primary)]">UNIVERSITY OF JAFFNA</h3>
+                                <p class="text-[var(--accent)] font-medium mt-1">BSc(Hons) in Computer Science</p>
+                                <p class="text-sm text-[var(--text-secondary)] mt-1">Vavuniya Campus, Vavuniya</p>
+                            </div>
+                            <span class="text-sm font-medium text-[var(--accent)] bg-[var(--accent)]/10 px-3 py-1 rounded mt-2 sm:mt-0">
+                                2022 - Present
+                            </span>
                         </div>
-                        <p class="text-[var(--text-secondary)] mb-3">Department of Technical Education & Training</p>
-                        <p class="text-[var(--text-secondary)] text-sm">Comprehensive IT training with practical
-                            implementation focus</p>
+                        <div class="flex items-center space-x-2 text-[var(--text-primary)]">
+                            <i class="fas fa-graduation-cap text-[var(--accent)]"></i>
+                            <span class="font-medium">Cumulative GPA: 3.81 / 4.0</span>
+                        </div>
+                    </div>
+
+                    <!-- DTET -->
+                    <div class="bg-[var(--card-bg)] p-8 rounded-lg border border-[var(--border-color)]">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
+                            <div>
+                                <h3 class="text-xl font-semibold text-[var(--text-primary)]">DEPARTMENT OF TECHNICAL EDUCATION & TRAINING</h3>
+                                <p class="text-[var(--text-secondary)] text-sm">Sri Lanka</p>
+                            </div>
+                            <span class="text-sm font-medium text-[var(--accent)] bg-[var(--accent)]/10 px-3 py-1 rounded mt-2 sm:mt-0">2019 - 2022</span>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center p-3 bg-[var(--tertiary-bg)]/50 rounded">
+                                <div>
+                                    <p class="text-sm font-medium text-[var(--text-primary)]">ICT Technician (NVQ Level 4)</p>
+                                </div>
+                                <span class="text-xs font-bold text-green-600 dark:text-green-400">DISTINCTION</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-[var(--tertiary-bg)]/50 rounded">
+                                <div>
+                                    <p class="text-sm font-medium text-[var(--text-primary)]">Advancing Career Skills (NVQ Level 4)</p>
+                                </div>
+                                <span class="text-xs font-bold text-blue-600 dark:text-blue-400">MERIT</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-[var(--tertiary-bg)]/50 rounded">
+                                <div>
+                                    <p class="text-sm font-medium text-[var(--text-primary)]">English Language</p>
+                                </div>
+                                <span class="text-xs font-bold text-blue-600 dark:text-blue-400">MERIT</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Awards -->
+                    <div>
+                        <h3 class="text-2xl font-light text-[var(--text-primary)] mb-8 text-center mt-12">Awards & Recognition</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-[var(--card-bg)] p-6 rounded-lg border-l-4 border-yellow-500 shadow-sm">
+                                <h4 class="text-lg font-bold text-[var(--text-primary)] mb-2 inline-flex items-center">
+                                    <i class="fas fa-award text-yellow-500 mr-2"></i>
+                                    DEAN’S LIST
+                                </h4>
+                                <p class="text-sm text-[var(--text-secondary)] font-medium mb-3">Levels 1, 2 & 3 (2020 - 2023)</p>
+                                <ul class="text-xs text-[var(--text-secondary)] space-y-1">
+                                    <li>• Academic Year 2020/2021 (Level 1)</li>
+                                    <li>• Academic Year 2021/2022 (Level 2)</li>
+                                    <li>• Academic Year 2022/2023 (Level 3)</li>
+                                    <li class="mt-2 text-[var(--accent)] font-medium">First & Second Semesters</li>
+                                </ul>
+                            </div>
+                            <div class="bg-[var(--card-bg)] p-6 rounded-lg border-l-4 border-blue-500 shadow-sm">
+                                <h4 class="text-lg font-bold text-[var(--text-primary)] mb-2 inline-flex items-center">
+                                    <i class="fas fa-trophy text-blue-500 mr-2"></i>
+                                    UNIVERSITY PRIZE
+                                </h4>
+                                <p class="text-sm text-[var(--text-secondary)] font-medium mb-3">Thambiah Mudaliyar Chatram Trust</p>
+                                <p class="text-xs text-[var(--text-secondary)]">Best performance in LEVEL 2 during the Academic Year 2021/2022.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
