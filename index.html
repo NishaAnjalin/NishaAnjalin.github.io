@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nishanthi Arulrasu - AI Developer & UI/UX Designer</title>
+    <title>Nishanthi Arulrasu - AI Developer, Full stack developer & UI/UX Designer</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts - Inter -->
@@ -27,7 +28,7 @@
             --border-color: #e5e7eb;
             --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
             --nav-bg: rgba(255, 255, 255, 0.95);
-            
+
             /* Dark Mode */
             --dark-primary-bg: #0a0a0a;
             --dark-secondary-bg: #171717;
@@ -44,6 +45,7 @@
             color: var(--text-primary);
             transition: background-color 0.3s, color 0.3s;
         }
+
         body.dark-mode {
             --primary-bg: var(--dark-primary-bg);
             --secondary-bg: var(--dark-secondary-bg);
@@ -54,21 +56,26 @@
             --border-color: var(--dark-border-color);
             --nav-bg: rgba(10, 10, 10, 0.95);
         }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 1.5rem;
         }
+
         .theme-toggle {
             transition: all 0.3s ease;
         }
+
         .theme-toggle:hover {
             transform: rotate(15deg) scale(1.1);
         }
+
         .nav-link {
             position: relative;
             padding-bottom: 4px;
         }
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -79,15 +86,17 @@
             background-color: var(--accent);
             transition: width 0.3s ease;
         }
+
         .nav-link:hover::after,
         .nav-link.active::after {
             width: 100%;
         }
+
         .nav-link.active {
             color: var(--accent);
             font-weight: 500;
         }
-        
+
         /* Enhanced Contact Section */
         .contact-card {
             background-color: var(--card-bg);
@@ -96,56 +105,70 @@
             border: 1px solid var(--border-color);
             box-shadow: var(--shadow);
         }
+
         .social-icon {
             color: var(--text-secondary);
             font-size: 1.25rem;
             transition: all 0.3s ease;
         }
+
         .social-icon:hover {
             color: var(--accent);
             transform: translateY(-2px);
         }
-        
+
         /* Custom Animations */
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
         }
+
         .float-animation {
             animation: float 5s ease-in-out infinite;
         }
-        
+
         /* Card Hover Effects */
         .project-card {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             border: 1px solid var(--border-color);
         }
+
         .project-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             border-color: var(--accent);
         }
-        
+
         /* Skill Cards */
         .skill-card {
             border: 1px solid var(--border-color);
             transition: all 0.3s ease;
         }
+
         .skill-card:hover {
             border-color: var(--accent);
             transform: translateY(-2px);
         }
-        
+
         /* Timeline */
         .timeline-content {
             border: 1px solid var(--border-color);
         }
     </style>
 </head>
+
 <body class="antialiased">
 
     <!-- Navigation Bar -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-[var(--nav-bg)] backdrop-blur-sm border-b border-[var(--border-color)]">
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-[var(--nav-bg)] backdrop-blur-sm border-b border-[var(--border-color)]">
         <nav class="container flex items-center justify-between py-4">
             <!-- Logo/Name -->
             <a href="#hero" class="text-xl font-semibold text-[var(--text-primary)]">Nishanthi Arulrasu</a>
@@ -153,14 +176,20 @@
             <div class="flex items-center space-x-6">
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="#about" class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">About</a>
-                    <a href="#projects" class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Projects</a>
-                    <a href="#skills" class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Skills</a>
-                    <a href="#uiux" class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">UI/UX</a>
-                    <a href="#experience" class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Experience</a>
-                    <a href="#contact" class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Contact</a>
+                    <a href="#about"
+                        class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">About</a>
+                    <a href="#projects"
+                        class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Projects</a>
+                    <a href="#skills"
+                        class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Skills</a>
+                    <a href="#uiux"
+                        class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">UI/UX</a>
+                    <a href="#experience"
+                        class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Experience</a>
+                    <a href="#contact"
+                        class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Contact</a>
                 </div>
-                
+
                 <!-- Theme Toggle -->
                 <button id="theme-toggle" class="theme-toggle p-2">
                     <i id="moon-icon" class="fas fa-moon text-[var(--text-secondary)]"></i>
@@ -168,21 +197,35 @@
                 </button>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" class="md:hidden text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300 focus:outline-none">
+                <button id="mobile-menu-button"
+                    class="md:hidden text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300 focus:outline-none">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </nav>
 
         <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-[var(--primary-bg)] border-b border-[var(--border-color)] shadow-sm py-4">
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 right-0 bg-[var(--primary-bg)] border-b border-[var(--border-color)] shadow-sm py-4">
             <div class="flex flex-col items-center space-y-4">
-                <a href="#about" class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300" onclick="closeMenu()">About</a>
-                <a href="#projects" class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300" onclick="closeMenu()">Projects</a>
-                <a href="#skills" class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300" onclick="closeMenu()">Skills</a>
-                <a href="#uiux" class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300" onclick="closeMenu()">UI/UX</a>
-                <a href="#experience" class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300" onclick="closeMenu()">Experience</a>
-                <a href="#contact" class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300" onclick="closeMenu()">Contact</a>
+                <a href="#about"
+                    class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300"
+                    onclick="closeMenu()">About</a>
+                <a href="#projects"
+                    class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300"
+                    onclick="closeMenu()">Projects</a>
+                <a href="#skills"
+                    class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300"
+                    onclick="closeMenu()">Skills</a>
+                <a href="#uiux"
+                    class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300"
+                    onclick="closeMenu()">UI/UX</a>
+                <a href="#experience"
+                    class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300"
+                    onclick="closeMenu()">Experience</a>
+                <a href="#contact"
+                    class="nav-link text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300"
+                    onclick="closeMenu()">Contact</a>
             </div>
         </div>
     </header>
@@ -197,23 +240,26 @@
                     Nishanthi Arulrasu
                 </h1>
                 <div class="mb-8">
-                    <p class="text-xl text-[var(--accent)] font-medium">AI Developer & UI/UX Designer</p>
+                    <p class="text-xl text-[var(--accent)] font-medium">AI Developer, Full stack developer & UI/UX Designer</p>
                     <div class="w-16 h-px bg-[var(--accent)] mx-auto mt-4"></div>
                 </div>
                 <p class="text-lg text-[var(--text-secondary)] mb-8 max-w-2xl mx-auto leading-relaxed">
-                    Crafting intelligent solutions with clean, user-centered design.
-                    Specializing in AI development and high-fidelity prototyping with Axure RP.
+                    Passionate Computer Science student with expertise across a wide range of technologies,
+                    from Full-stack and Mobile development to AI and High Performance Computing.
                 </p>
                 <div class="flex justify-center space-x-4">
-                    <a href="#projects" class="bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white font-medium py-3 px-6 rounded transition-all duration-300 border border-[var(--accent)]">
+                    <a href="#projects"
+                        class="bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white font-medium py-3 px-6 rounded transition-all duration-300 border border-[var(--accent)]">
                         View Work
                     </a>
-                    <a href="#contact" class="bg-transparent hover:bg-[var(--tertiary-bg)] text-[var(--accent)] font-medium py-3 px-6 rounded transition-all duration-300 border border-[var(--border-color)]">
+                    <a href="#contact"
+                        class="bg-transparent hover:bg-[var(--tertiary-bg)] text-[var(--accent)] font-medium py-3 px-6 rounded transition-all duration-300 border border-[var(--border-color)]">
                         Get in Touch
                     </a>
                 </div>
                 <div class="mt-16">
-                    <a href="#about" class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">
+                    <a href="#about"
+                        class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">
                         <i class="fas fa-chevron-down float-animation"></i>
                     </a>
                 </div>
@@ -228,35 +274,52 @@
                     <div class="order-2 md:order-1">
                         <div class="text-lg text-[var(--text-secondary)] leading-relaxed space-y-6">
                             <p>
-                                I'm a Computer Science student at University of Jaffna, specializing in AI development and UI/UX design. My work combines technical expertise with design thinking to create meaningful digital experiences.
+                                I am Nishanthi Arulrasu, a Computer Science student and aspiring software developer with
+                                expertise in <span class="text-[var(--accent)]">JavaScript</span>, <span
+                                    class="text-[var(--accent)]">TypeScript</span>, <span
+                                    class="text-[var(--accent)]">Python</span> (TensorFlow, NumPy, Pandas), <span
+                                    class="text-[var(--accent)]">PHP</span>, <span
+                                    class="text-[var(--accent)]">C++</span>, <span
+                                    class="text-[var(--accent)]">C#</span>, HTML, CSS, Tailwind CSS, Bootstrap,
+                                WordPress, and Power BI.
                             </p>
                             <p>
-                                With strong skills in <span class="text-[var(--accent)]">Python</span>, <span class="text-[var(--accent)]">TensorFlow</span>, and <span class="text-[var(--accent)]">Axure RP</span>, I approach problems with both analytical precision and creative empathy. I believe in building solutions that are not only functional but also intuitive and accessible.
+                                My expertise extends to frameworks such as <span
+                                    class="text-[var(--accent)]">Next.js</span>, <span
+                                    class="text-[var(--accent)]">Node.js</span>, <span
+                                    class="text-[var(--accent)]">ASP.NET</span>, <span
+                                    class="text-[var(--accent)]">Laravel</span>, <span
+                                    class="text-[var(--accent)]">React</span>, <span
+                                    class="text-[var(--accent)]">Express</span>, and <span
+                                    class="text-[var(--accent)]">React Native</span>. I also have experience in parallel
+                                and high-performance computing using <span class="text-[var(--accent)]">OpenMP</span>
+                                and <span class="text-[var(--accent)]">MPI</span>.
                             </p>
                             <div class="pt-4 border-t border-[var(--border-color)]">
                                 <div class="grid grid-cols-2 gap-4">
                                     <div class="flex items-center space-x-3">
                                         <div class="w-2 h-2 bg-[var(--accent)] rounded-full"></div>
-                                        <span>AI/ML Development</span>
-                                    </div>
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-2 h-2 bg-[var(--accent)] rounded-full"></div>
-                                        <span>Axure RP Prototyping</span>
-                                    </div>
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-2 h-2 bg-[var(--accent)] rounded-full"></div>
-                                        <span>User Research</span>
-                                    </div>
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-2 h-2 bg-[var(--accent)] rounded-full"></div>
                                         <span>Full Stack Development</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-2 h-2 bg-[var(--accent)] rounded-full"></div>
+                                        <span>Mobile App Development</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-2 h-2 bg-[var(--accent)] rounded-full"></div>
+                                        <span>AI & Machine Learning</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-2 h-2 bg-[var(--accent)] rounded-full"></div>
+                                        <span>Parallel Computing</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="order-1 md:order-2">
-                        <img src="Nisha.jpeg" alt="Nishanthi Arulrasu" class="rounded-lg shadow-sm w-full h-auto object-cover">
+                        <img src="Nisha.jpeg" alt="Nishanthi Arulrasu"
+                            class="rounded-lg shadow-sm w-full h-auto object-cover">
                     </div>
                 </div>
             </div>
@@ -272,17 +335,23 @@
                         <div class="p-6">
                             <div class="flex items-center justify-between mb-4">
                                 <h3 class="text-xl font-medium text-[var(--text-primary)]">Face Emotion Recognition</h3>
-                                <span class="text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/10 px-2 py-1 rounded">AI/ML</span>
+                                <span
+                                    class="text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/10 px-2 py-1 rounded">AI/ML</span>
                             </div>
                             <p class="text-[var(--text-secondary)] text-sm mb-6 leading-relaxed">
-                                Real-time facial emotion detection system using computer vision and deep learning techniques.
+                                Real-time facial emotion detection system using computer vision and deep learning
+                                techniques.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="text-xs text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">Python</span>
-                                <span class="text-xs text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">OpenCV</span>
-                                <span class="text-xs text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">TensorFlow</span>
+                                <span
+                                    class="text-xs text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">Python</span>
+                                <span
+                                    class="text-xs text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">OpenCV</span>
+                                <span
+                                    class="text-xs text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">TensorFlow</span>
                             </div>
-                            <a href="https://github.com/NishaAnjalin/Face-emotion-recognition" target="_blank" class="text-[var(--accent)] hover:text-[var(--accent-hover)] text-sm font-medium transition-colors duration-300 flex items-center">
+                            <a href="https://github.com/NishaAnjalin/Face-emotion-recognition" target="_blank"
+                                class="text-[var(--accent)] hover:text-[var(--accent-hover)] text-sm font-medium transition-colors duration-300 flex items-center">
                                 <i class="fab fa-github mr-2"></i>
                                 View on GitHub
                             </a>
@@ -294,17 +363,25 @@
                         <div class="p-6">
                             <div class="flex items-center justify-between mb-4">
                                 <h3 class="text-xl font-medium text-[var(--text-primary)]">AI Analytics Dashboard</h3>
-                                <span class="text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/10 px-2 py-1 rounded">UI/UX</span>
+                                <span
+                                    class="text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/10 px-2 py-1 rounded">UI/UX</span>
                             </div>
                             <p class="text-[var(--text-secondary)] text-sm mb-6 leading-relaxed">
-                                Interactive dashboard design with complex prototyping in Axure RP for data visualization and analytics.
+                                Interactive dashboard design with complex prototyping in Axure RP for data visualization
+                                and analytics.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="text-xs text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">Axure RP</span>
-                                <span class="text-xs text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">User Research</span>
-                                <span class="text-xs text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">Prototyping</span>
+                                <span
+                                    class="text-xs text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">Axure
+                                    RP</span>
+                                <span
+                                    class="text-xs text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">User
+                                    Research</span>
+                                <span
+                                    class="text-xs text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">Prototyping</span>
                             </div>
-                            <a href="#contact" class="text-[var(--accent)] hover:text-[var(--accent-hover)] text-sm font-medium transition-colors duration-300 flex items-center">
+                            <a href="#contact"
+                                class="text-[var(--accent)] hover:text-[var(--accent-hover)] text-sm font-medium transition-colors duration-300 flex items-center">
                                 <i class="fas fa-external-link-alt mr-2"></i>
                                 View Prototype
                             </a>
@@ -316,17 +393,25 @@
                         <div class="p-6">
                             <div class="flex items-center justify-between mb-4">
                                 <h3 class="text-xl font-medium text-[var(--text-primary)]">Object Tracking System</h3>
-                                <span class="text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/10 px-2 py-1 rounded">Computer Vision</span>
+                                <span
+                                    class="text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/10 px-2 py-1 rounded">Computer
+                                    Vision</span>
                             </div>
                             <p class="text-[var(--text-secondary)] text-sm mb-6 leading-relaxed">
-                                Real-time object detection and tracking using color isolation techniques in video streams.
+                                Real-time object detection and tracking using color isolation techniques in video
+                                streams.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="text-xs text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">Python</span>
-                                <span class="text-xs text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">OpenCV</span>
-                                <span class="text-xs text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">Video Processing</span>
+                                <span
+                                    class="text-xs text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">Python</span>
+                                <span
+                                    class="text-xs text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">OpenCV</span>
+                                <span
+                                    class="text-xs text-[var(--text-secondary)] bg-[var(--tertiary-bg)] px-2 py-1 rounded">Video
+                                    Processing</span>
                             </div>
-                            <a href="https://github.com/NishaAnjalin/Object-tracking-based-on-color" target="_blank" class="text-[var(--accent)] hover:text-[var(--accent-hover)] text-sm font-medium transition-colors duration-300 flex items-center">
+                            <a href="https://github.com/NishaAnjalin/Object-tracking-based-on-color" target="_blank"
+                                class="text-[var(--accent)] hover:text-[var(--accent-hover)] text-sm font-medium transition-colors duration-300 flex items-center">
                                 <i class="fab fa-github mr-2"></i>
                                 View on GitHub
                             </a>
@@ -340,80 +425,12 @@
         <section id="skills" class="py-20 md:py-28">
             <div class="container">
                 <h2 class="text-3xl font-light text-[var(--text-primary)] mb-12 text-center">Skills</h2>
-                
-                <!-- AI/ML Skills -->
+
+                <!-- Programming Languages -->
                 <div class="mb-12">
                     <h3 class="text-lg font-medium text-[var(--text-primary)] mb-6 flex items-center">
                         <div class="w-3 h-3 bg-[var(--accent)] mr-3"></div>
-                        AI & Machine Learning
-                    </h3>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fab fa-python text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">Python</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fas fa-robot text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">TensorFlow</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fas fa-eye text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">OpenCV</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fas fa-chart-line text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">Pandas</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fas fa-project-diagram text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">PyTorch</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fas fa-language text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">NLTK</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- UI/UX Skills -->
-                <div class="mb-12">
-                    <h3 class="text-lg font-medium text-[var(--text-primary)] mb-6 flex items-center">
-                        <div class="w-3 h-3 bg-[var(--accent)] mr-3"></div>
-                        UI/UX Design
-                    </h3>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fas fa-mouse-pointer text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">Axure RP</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fab fa-figma text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">Figma</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fas fa-user-friends text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">User Research</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fas fa-sitemap text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">Wireframing</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fas fa-tasks text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">Usability Testing</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fas fa-paint-brush text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">Visual Design</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Development Skills -->
-                <div>
-                    <h3 class="text-lg font-medium text-[var(--text-primary)] mb-6 flex items-center">
-                        <div class="w-3 h-3 bg-[var(--accent)] mr-3"></div>
-                        Development
+                        Languages
                     </h3>
                     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
                         <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
@@ -421,24 +438,92 @@
                             <p class="text-sm text-[var(--text-primary)]">JavaScript</p>
                         </div>
                         <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
+                            <i class="fas fa-code text-2xl mb-2 text-[var(--text-primary)]"></i>
+                            <p class="text-sm text-[var(--text-primary)]">TypeScript</p>
+                        </div>
+                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
+                            <i class="fab fa-python text-2xl mb-2 text-[var(--text-primary)]"></i>
+                            <p class="text-sm text-[var(--text-primary)]">Python</p>
+                        </div>
+                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
+                            <i class="fab fa-php text-2xl mb-2 text-[var(--text-primary)]"></i>
+                            <p class="text-sm text-[var(--text-primary)]">PHP</p>
+                        </div>
+                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
+                            <span class="text-2xl font-bold mb-2 inline-block text-[var(--text-primary)]">C++</span>
+                            <p class="text-sm text-[var(--text-primary)]">C++</p>
+                        </div>
+                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
+                            <span class="text-2xl font-bold mb-2 inline-block text-[var(--text-primary)]">C#</span>
+                            <p class="text-sm text-[var(--text-primary)]">C#</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frameworks & Technologies -->
+                <div class="mb-12">
+                    <h3 class="text-lg font-medium text-[var(--text-primary)] mb-6 flex items-center">
+                        <div class="w-3 h-3 bg-[var(--accent)] mr-3"></div>
+                        Frameworks & Libraries
+                    </h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
+                            <i class="fab fa-react text-2xl mb-2 text-[var(--text-primary)]"></i>
+                            <p class="text-sm text-[var(--text-primary)]">React / Native</p>
+                        </div>
+                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
+                            <i class="fas fa-server text-2xl mb-2 text-[var(--text-primary)]"></i>
+                            <p class="text-sm text-[var(--text-primary)]">Next.js / Node.js</p>
+                        </div>
+                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
+                            <i class="fab fa-laravel text-2xl mb-2 text-[var(--text-primary)]"></i>
+                            <p class="text-sm text-[var(--text-primary)]">Laravel</p>
+                        </div>
+                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
+                            <i class="fas fa-terminal text-2xl mb-2 text-[var(--text-primary)]"></i>
+                            <p class="text-sm text-[var(--text-primary)]">Express</p>
+                        </div>
+                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
+                            <i class="fas fa-windows text-2xl mb-2 text-[var(--text-primary)]"></i>
+                            <p class="text-sm text-[var(--text-primary)]">ASP.NET</p>
+                        </div>
+                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
+                            <i class="fab fa-wordpress text-2xl mb-2 text-[var(--text-primary)]"></i>
+                            <p class="text-sm text-[var(--text-primary)]">WordPress</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & High Performance Computing -->
+                <div class="mb-12">
+                    <h3 class="text-lg font-medium text-[var(--text-primary)] mb-6 flex items-center">
+                        <div class="w-3 h-3 bg-[var(--accent)] mr-3"></div>
+                        Specialized & Tools
+                    </h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
+                            <i class="fas fa-microchip text-2xl mb-2 text-[var(--text-primary)]"></i>
+                            <p class="text-sm text-[var(--text-primary)]">OpenMP / MPI</p>
+                        </div>
+                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
+                            <i class="fas fa-chart-bar text-2xl mb-2 text-[var(--text-primary)]"></i>
+                            <p class="text-sm text-[var(--text-primary)]">Power BI</p>
+                        </div>
+                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
+                            <i class="fab fa-bootstrap text-2xl mb-2 text-[var(--text-primary)]"></i>
+                            <p class="text-sm text-[var(--text-primary)]">Tailwind/Bootstrap</p>
+                        </div>
+                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
+                            <i class="fas fa-brain text-2xl mb-2 text-[var(--text-primary)]"></i>
+                            <p class="text-sm text-[var(--text-primary)]">AI/ML Tools</p>
+                        </div>
+                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
                             <i class="fas fa-database text-2xl mb-2 text-[var(--text-primary)]"></i>
                             <p class="text-sm text-[var(--text-primary)]">MySQL</p>
                         </div>
                         <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fab fa-html5 text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">HTML/CSS</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fab fa-java text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">Java</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
                             <i class="fab fa-git-alt text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">Git</p>
-                        </div>
-                        <div class="skill-card bg-[var(--card-bg)] p-4 rounded-lg text-center">
-                            <i class="fas fa-terminal text-2xl mb-2 text-[var(--text-primary)]"></i>
-                            <p class="text-sm text-[var(--text-primary)]">CLI</p>
+                            <p class="text-sm text-[var(--text-primary)]">Git/CLI</p>
                         </div>
                     </div>
                 </div>
@@ -458,8 +543,10 @@
                                     <div class="w-2 h-2 bg-[var(--accent)] rounded-full"></div>
                                 </div>
                                 <div>
-                                    <h4 class="text-lg font-medium text-[var(--text-primary)] mb-2">High-Fidelity Prototyping</h4>
-                                    <p class="text-[var(--text-secondary)] text-sm">Creating interactive prototypes with conditional logic, dynamic content, and realistic user flows.</p>
+                                    <h4 class="text-lg font-medium text-[var(--text-primary)] mb-2">High-Fidelity
+                                        Prototyping</h4>
+                                    <p class="text-[var(--text-secondary)] text-sm">Creating interactive prototypes with
+                                        conditional logic, dynamic content, and realistic user flows.</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
@@ -467,8 +554,10 @@
                                     <div class="w-2 h-2 bg-[var(--accent)] rounded-full"></div>
                                 </div>
                                 <div>
-                                    <h4 class="text-lg font-medium text-[var(--text-primary)] mb-2">Complex Interactions</h4>
-                                    <p class="text-[var(--text-secondary)] text-sm">Designing sophisticated user interactions and animations for web and mobile applications.</p>
+                                    <h4 class="text-lg font-medium text-[var(--text-primary)] mb-2">Complex Interactions
+                                    </h4>
+                                    <p class="text-[var(--text-secondary)] text-sm">Designing sophisticated user
+                                        interactions and animations for web and mobile applications.</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
@@ -477,7 +566,8 @@
                                 </div>
                                 <div>
                                     <h4 class="text-lg font-medium text-[var(--text-primary)] mb-2">User Testing</h4>
-                                    <p class="text-[var(--text-secondary)] text-sm">Conducting usability tests with interactive prototypes to gather valuable user feedback.</p>
+                                    <p class="text-[var(--text-secondary)] text-sm">Conducting usability tests with
+                                        interactive prototypes to gather valuable user feedback.</p>
                                 </div>
                             </div>
                         </div>
@@ -521,36 +611,42 @@
         <section id="experience" class="py-20 md:py-28">
             <div class="container">
                 <h2 class="text-3xl font-light text-[var(--text-primary)] mb-12 text-center">Experience & Education</h2>
-                
+
                 <div class="space-y-8 max-w-3xl mx-auto">
                     <!-- Experience 1 -->
-                    <div class="timeline-content bg-[var(--card-bg)] p-6 rounded-lg border border-[var(--border-color)]">
+                    <div
+                        class="timeline-content bg-[var(--card-bg)] p-6 rounded-lg border border-[var(--border-color)]">
                         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                             <h3 class="text-xl font-medium text-[var(--text-primary)]">BSc (Hons) Computer Science</h3>
                             <span class="text-sm text-[var(--accent)] mt-1 sm:mt-0">2022 - Present</span>
                         </div>
                         <p class="text-[var(--text-secondary)] mb-3">University of Jaffna</p>
-                        <p class="text-[var(--text-secondary)] text-sm">Specializing in AI/ML and Human-Computer Interaction</p>
+                        <p class="text-[var(--text-secondary)] text-sm">Specializing in AI/ML and Human-Computer
+                            Interaction</p>
                     </div>
 
                     <!-- Experience 2 -->
-                    <div class="timeline-content bg-[var(--card-bg)] p-6 rounded-lg border border-[var(--border-color)]">
+                    <div
+                        class="timeline-content bg-[var(--card-bg)] p-6 rounded-lg border border-[var(--border-color)]">
                         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                             <h3 class="text-xl font-medium text-[var(--text-primary)]">ICT Technician</h3>
                             <span class="text-sm text-[var(--accent)] mt-1 sm:mt-0">2022</span>
                         </div>
                         <p class="text-[var(--text-secondary)] mb-3">Road Development Authority</p>
-                        <p class="text-[var(--text-secondary)] text-sm">Confidentiality and Research Analysis, Hybrid role in Batticaloa</p>
+                        <p class="text-[var(--text-secondary)] text-sm">Confidentiality and Research Analysis, Hybrid
+                            role in Batticaloa</p>
                     </div>
 
                     <!-- Experience 3 -->
-                    <div class="timeline-content bg-[var(--card-bg)] p-6 rounded-lg border border-[var(--border-color)]">
+                    <div
+                        class="timeline-content bg-[var(--card-bg)] p-6 rounded-lg border border-[var(--border-color)]">
                         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                             <h3 class="text-xl font-medium text-[var(--text-primary)]">ICT Technician (NVQ Level 4)</h3>
                             <span class="text-sm text-[var(--accent)] mt-1 sm:mt-0">2021 - 2022</span>
                         </div>
                         <p class="text-[var(--text-secondary)] mb-3">Department of Technical Education & Training</p>
-                        <p class="text-[var(--text-secondary)] text-sm">Comprehensive IT training with practical implementation focus</p>
+                        <p class="text-[var(--text-secondary)] text-sm">Comprehensive IT training with practical
+                            implementation focus</p>
                     </div>
                 </div>
             </div>
@@ -564,29 +660,40 @@
                     <!-- Contact Form -->
                     <form class="contact-card">
                         <div class="mb-6">
-                            <label for="name" class="block text-sm font-medium text-[var(--text-primary)] mb-2">Name</label>
-                            <input type="text" id="name" class="w-full bg-transparent text-[var(--text-primary)] border border-[var(--border-color)] rounded px-4 py-3 focus:outline-none focus:border-[var(--accent)] transition-colors duration-300" placeholder="Your name">
+                            <label for="name"
+                                class="block text-sm font-medium text-[var(--text-primary)] mb-2">Name</label>
+                            <input type="text" id="name"
+                                class="w-full bg-transparent text-[var(--text-primary)] border border-[var(--border-color)] rounded px-4 py-3 focus:outline-none focus:border-[var(--accent)] transition-colors duration-300"
+                                placeholder="Your name">
                         </div>
                         <div class="mb-6">
-                            <label for="email" class="block text-sm font-medium text-[var(--text-primary)] mb-2">Email</label>
-                            <input type="email" id="email" class="w-full bg-transparent text-[var(--text-primary)] border border-[var(--border-color)] rounded px-4 py-3 focus:outline-none focus:border-[var(--accent)] transition-colors duration-300" placeholder="your@email.com">
+                            <label for="email"
+                                class="block text-sm font-medium text-[var(--text-primary)] mb-2">Email</label>
+                            <input type="email" id="email"
+                                class="w-full bg-transparent text-[var(--text-primary)] border border-[var(--border-color)] rounded px-4 py-3 focus:outline-none focus:border-[var(--accent)] transition-colors duration-300"
+                                placeholder="your@email.com">
                         </div>
                         <div class="mb-6">
-                            <label for="message" class="block text-sm font-medium text-[var(--text-primary)] mb-2">Message</label>
-                            <textarea id="message" rows="4" class="w-full bg-transparent text-[var(--text-primary)] border border-[var(--border-color)] rounded px-4 py-3 focus:outline-none focus:border-[var(--accent)] transition-colors duration-300" placeholder="Your message..."></textarea>
+                            <label for="message"
+                                class="block text-sm font-medium text-[var(--text-primary)] mb-2">Message</label>
+                            <textarea id="message" rows="4"
+                                class="w-full bg-transparent text-[var(--text-primary)] border border-[var(--border-color)] rounded px-4 py-3 focus:outline-none focus:border-[var(--accent)] transition-colors duration-300"
+                                placeholder="Your message..."></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white font-medium py-3 rounded transition-colors duration-300 border border-[var(--accent)]">
+                        <button type="submit"
+                            class="w-full bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white font-medium py-3 rounded transition-colors duration-300 border border-[var(--accent)]">
                             Send Message
                         </button>
                     </form>
-                    
+
                     <!-- Contact Info -->
                     <div>
                         <h3 class="text-xl font-medium text-[var(--text-primary)] mb-6">Contact Information</h3>
                         <div class="space-y-6">
                             <div>
                                 <h4 class="text-sm font-medium text-[var(--text-primary)] mb-2">Email</h4>
-                                <a href="mailto:nishaanjalin@gmail.com" class="text-[var(--accent)] hover:text-[var(--accent-hover)] transition-colors duration-300">
+                                <a href="mailto:nishaanjalin@gmail.com"
+                                    class="text-[var(--accent)] hover:text-[var(--accent-hover)] transition-colors duration-300">
                                     nishaanjalin@gmail.com
                                 </a>
                             </div>
@@ -596,14 +703,16 @@
                                     <a href="https://github.com/NishaAnjalin" target="_blank" class="social-icon">
                                         <i class="fab fa-github"></i>
                                     </a>
-                                    <a href="https://www.linkedin.com/in/nishanthi-arulrasu-b10260279" target="_blank" class="social-icon">
+                                    <a href="https://www.linkedin.com/in/nishanthi-arulrasu-b10260279" target="_blank"
+                                        class="social-icon">
                                         <i class="fab fa-linkedin"></i>
                                     </a>
                                 </div>
                             </div>
                             <div class="pt-6 border-t border-[var(--border-color)]">
                                 <p class="text-sm text-[var(--text-secondary)]">
-                                    I'm currently open to collaborations and new opportunities. Feel free to reach out if you'd like to discuss a project or just say hello.
+                                    I'm currently open to collaborations and new opportunities. Feel free to reach out
+                                    if you'd like to discuss a project or just say hello.
                                 </p>
                             </div>
                         </div>
@@ -621,9 +730,12 @@
                     <p class="text-sm text-[var(--text-secondary)]">© 2024 Nishanthi Arulrasu</p>
                 </div>
                 <div class="flex space-x-6">
-                    <a href="#hero" class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Home</a>
-                    <a href="#projects" class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Projects</a>
-                    <a href="#contact" class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Contact</a>
+                    <a href="#hero"
+                        class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Home</a>
+                    <a href="#projects"
+                        class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Projects</a>
+                    <a href="#contact"
+                        class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Contact</a>
                 </div>
             </div>
         </div>
@@ -655,7 +767,7 @@
         function closeMenu() {
             mobileMenu.classList.add('hidden');
         }
-        
+
         mobileMenuButton.addEventListener('click', toggleMenu);
 
         // Theme toggle functionality
@@ -673,7 +785,7 @@
 
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
-            
+
             if (document.body.classList.contains('dark-mode')) {
                 moonIcon.classList.add('hidden');
                 sunIcon.classList.remove('hidden');
@@ -698,16 +810,16 @@
 
         function updateActiveNav() {
             let current = '';
-            
+
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                
+
                 if (window.scrollY >= (sectionTop - 200)) {
                     current = section.getAttribute('id');
                 }
             });
-            
+
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href').includes(current)) {
@@ -717,14 +829,14 @@
         }
 
         window.addEventListener('scroll', updateActiveNav);
-        
+
         // Form submission handling
         const contactForm = document.querySelector('form');
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             const name = document.getElementById('name').value;
-            
+
             alert(`Thank you ${name}! Your message has been sent. I'll get back to you soon.`);
             contactForm.reset();
         });
@@ -733,4 +845,5 @@
         updateActiveNav();
     </script>
 </body>
+
 </html>
