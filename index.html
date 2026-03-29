@@ -15,35 +15,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            /* Minimal Color Palette */
+            /* Minimal & Professional Color Palette */
             --primary-bg: #ffffff;
-            --secondary-bg: #f8f9fa;
-            --tertiary-bg: #f1f3f4;
+            --secondary-bg: #f8fafc;
+            --tertiary-bg: #f1f5f9;
             --card-bg: #ffffff;
-            --text-primary: #1a1a1a;
-            --text-secondary: #6b7280;
-            --text-light: #4b5563;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
             --accent: #2563eb;
-            --accent-hover: #1d4ed8;
-            --border-color: #e5e7eb;
-            --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            --nav-bg: rgba(255, 255, 255, 0.95);
+            --accent-glow: rgba(37, 99, 235, 0.1);
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --nav-bg: rgba(255, 255, 255, 0.85);
 
-            /* Dark Mode */
-            --dark-primary-bg: #0a0a0a;
-            --dark-secondary-bg: #171717;
-            --dark-tertiary-bg: #262626;
-            --dark-card-bg: #171717;
+            /* Dark Mode Tokens */
+            --dark-primary-bg: #020617;
+            --dark-secondary-bg: #0f172a;
+            --dark-tertiary-bg: #1e293b;
+            --dark-card-bg: #0f172a;
             --dark-text-primary: #f8fafc;
             --dark-text-secondary: #94a3b8;
-            --dark-border-color: #374151;
+            --dark-border-color: #334155;
+            --dark-nav-bg: rgba(2, 6, 23, 0.85);
         }
 
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--primary-bg);
             color: var(--text-primary);
-            transition: background-color 0.3s, color 0.3s;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            -webkit-font-smoothing: antialiased;
         }
 
         body.dark-mode {
@@ -54,7 +56,7 @@
             --text-primary: var(--dark-text-primary);
             --text-secondary: var(--dark-text-secondary);
             --border-color: var(--dark-border-color);
-            --nav-bg: rgba(10, 10, 10, 0.95);
+            --nav-bg: var(--dark-nav-bg);
         }
 
         .container {
