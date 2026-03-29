@@ -1188,110 +1188,316 @@
         </section>
 
         <!-- Academic Foundations Section -->
-        <section id="knowledge" class="py-24 md:py-32 bg-[var(--primary-bg)] reveal">
+        <section id="knowledge" class="py-24 md:py-32 bg-[var(--primary-bg)] reveal overflow-hidden">
             <div class="container">
-                <div class="max-w-4xl mx-auto text-center mb-20">
-                    <span class="section-tag">Scientific & Theoretical Base</span>
-                    <h2 class="text-4xl font-black text-[var(--text-primary)] tracking-tight">Academic Foundations</h2>
+                <div class="max-w-4xl mx-auto text-center mb-16">
+                    <span class="section-tag">Scientific Rigor</span>
+                    <h2 class="text-4xl font-black text-[var(--text-primary)] tracking-tight">Academic Intelligence</h2>
                     <p class="text-[var(--text-secondary)] mt-4 max-w-2xl mx-auto leading-relaxed text-sm md:text-md">
-                        Powering engineering solutions with rigorous <span class="text-[var(--text-primary)] font-bold">Mathematical Modeling</span>, 
-                        <span class="text-[var(--text-primary)] font-bold">Statistical Intelligence</span>, and <span class="text-[var(--text-primary)] font-bold">Computational Theory</span>.
+                        A multidisciplinary theoretical foundation driving excellence in <span class="text-[var(--text-primary)] font-bold">Computational Engineering</span> and <span class="text-[var(--text-primary)] font-bold">Scientific Analysis</span>.
                     </p>
                 </div>
 
-                <div class="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                    <!-- Column 1: Mathematical & Statistical Intelligence -->
-                    <div class="space-y-8">
-                        <div class="card-premium p-10 relative overflow-hidden group">
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-blue-600/5 -mr-16 -mt-16 rounded-full group-hover:bg-blue-600/10 transition-colors"></div>
-                            <h3 class="text-xl font-bold text-[var(--text-primary)] mb-8 flex items-center">
-                                <i class="fas fa-square-root-variable mr-3 text-blue-600"></i> Mathematical Knowledge
-                            </h3>
-                            <div class="space-y-10">
-                                <div class="relative pl-6 border-l-2 border-blue-500/20">
-                                    <h4 class="text-md font-bold text-[var(--text-primary)] mb-2">Differential Equations</h4>
-                                    <p class="text-[11px] text-[var(--text-secondary)] leading-relaxed">Fundamental concepts of linear differential equations, systems of equations, integrability conditions, and mathematical modeling for scientific and engineering problems.</p>
-                                </div>
-                                <div class="relative pl-6 border-l-2 border-blue-500/20">
-                                    <h4 class="text-md font-bold text-[var(--text-primary)] mb-2">Methods of Applied Mathematics</h4>
-                                    <p class="text-[11px] text-[var(--text-secondary)] leading-relaxed">Comprehensive understanding of Fourier series, power series, and Partial Differential Equations (PDEs) for modeling complex physical systems and transforms.</p>
-                                </div>
-                                <div class="relative pl-6 border-l-2 border-blue-500/20">
-                                    <h4 class="text-md font-bold text-[var(--text-primary)] mb-2">Analysis & Number Theory</h4>
-                                    <p class="text-[11px] text-[var(--text-secondary)] leading-relaxed">Foundational real analysis techniques (limits, continuity, differentiation) and key number theory topics (divisibility, congruence, prime factorization).</p>
-                                </div>
-                                <div class="relative pl-6 border-l-2 border-blue-500/20">
-                                    <h4 class="text-md font-bold text-[var(--text-primary)] mb-2">Foundations of Mathematics</h4>
-                                    <p class="text-[11px] text-[var(--text-secondary)] leading-relaxed">Sets, logic, and proof techniques. Boolean algebra, Karnaugh maps, and introductory group theory for computational problem-solving.</p>
-                                </div>
-                            </div>
-                        </div>
+                <!-- Tab Navigation -->
+                <div class="flex flex-wrap justify-center gap-2 mb-12 max-w-4xl mx-auto">
+                    <button onclick="switchKTab('math')" class="ktab-btn active px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-widest transition-all" id="btn-math">Mathematical Sciences</button>
+                    <button onclick="switchKTab('cs')" class="ktab-btn px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-widest transition-all" id="btn-cs">Computer Engineering</button>
+                    <button onclick="switchKTab('stats')" class="ktab-btn px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-widest transition-all" id="btn-stats">Statistical logic</button>
+                    <button onclick="switchKTab('pro')" class="ktab-btn px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-widest transition-all" id="btn-pro">Professional Skills</button>
+                </div>
 
-                        <div class="card-premium p-10 relative overflow-hidden group">
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-green-500/5 -mr-16 -mt-16 rounded-full group-hover:bg-green-500/10 transition-colors"></div>
-                            <h3 class="text-xl font-bold text-[var(--text-primary)] mb-8 flex items-center">
-                                <i class="fas fa-chart-pie mr-3 text-green-500"></i> Statistical Knowledge
-                            </h3>
-                            <div class="space-y-10">
-                                <div class="relative pl-6 border-l-2 border-green-500/20">
-                                    <h4 class="text-md font-bold text-[var(--text-primary)] mb-2">Statistical Inference</h4>
-                                    <p class="text-[11px] text-[var(--text-secondary)] leading-relaxed">Estimating population parameters, hypothesis testing, and statistical decision-making using parametric and non-parametric methodologies.</p>
+                <!-- Tab Content -->
+                <div class="max-w-7xl mx-auto">
+                    <!-- Math Tab -->
+                    <div id="ktab-math" class="ktab-content grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="card-premium p-6 group hover:border-blue-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-square-root-variable"></i>
                                 </div>
-                                <div class="relative pl-6 border-l-2 border-green-500/20">
-                                    <h4 class="text-md font-bold text-[var(--text-primary)] mb-2">Introduction to Statistics</h4>
-                                    <p class="text-[11px] text-[var(--text-secondary)] leading-relaxed">Core principles of statistics and probability, focusing on graphical analysis, probability theory, random variables, and real-world data interpretation.</p>
-                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Differential Equations</h4>
                             </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Modeling physical systems via first-order and higher-order linear equations, systems of ODEs, and scientific problem-solving.</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-blue-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-subscript"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Methods of Applied Math</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Fourier & Power series, PDEs for physical modeling, and complex integral transforms (Laplace/Fourier).</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-blue-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-Infinity"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Analysis & Number Theory</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Real analysis limits, continuity, and differentiation combined with prime factorization and divisibility logic.</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-blue-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Optimization I & II</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Simplex, Dynamic & Goal Programming, Game Theory, and sensitivity analysis for real-world decision modeling.</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-blue-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-vector-square"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Vector Calculus & Lin. Algebra</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Matrix operations, eigenvalues, Gauss/Stokes theorems, and linear transformations for high-dimensional geometry.</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-blue-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-project-diagram"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Graph Theory & Mechanics</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Trees, connectivity, and network flows combined with the mathematical dynamics of motion, stress, and strain.</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-blue-500/50 transition-all lg:col-span-2">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-cog"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Numerical Linear Algebra & FEM</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Gaussian elimination, LU factorization, and Finite Element Method (FEM) for engineering problems like heat transfer and fluid mechanics.</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-blue-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Theoretical Computation</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Automata theory, Turing machines, and complexity classes (P, NP) for fundamental computational understanding.</p>
                         </div>
                     </div>
 
-                    <!-- Column 2: Computer Science & Communication -->
-                    <div class="space-y-8">
-                        <div class="card-premium p-10 relative overflow-hidden group">
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-purple-600/5 -mr-16 -mt-16 rounded-full group-hover:bg-purple-600/10 transition-colors"></div>
-                            <h3 class="text-xl font-bold text-[var(--text-primary)] mb-8 flex items-center">
-                                <i class="fas fa-microchip mr-3 text-purple-600"></i> Computer Science
-                            </h3>
-                            <div class="space-y-10">
-                                <div class="relative pl-6 border-l-2 border-purple-500/20">
-                                    <h4 class="text-md font-bold text-[var(--text-primary)] mb-2">Object-Oriented Programming (Java)</h4>
-                                    <p class="text-[11px] text-[var(--text-secondary)] leading-relaxed">Hands-on application of OOP concepts: Abstraction, Encapsulation, Inheritance, and Polymorphism for designing modular and reusable software.</p>
+                    <!-- CS Tab -->
+                    <div id="ktab-cs" class="ktab-content hidden grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="card-premium p-6 group hover:border-purple-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-cubes"></i>
                                 </div>
-                                <div class="relative pl-6 border-l-2 border-purple-500/20">
-                                    <h4 class="text-md font-bold text-[var(--text-primary)] mb-2">Database Systems</h4>
-                                    <p class="text-[11px] text-[var(--text-secondary)] leading-relaxed">Designing efficient relational databases, covering normalization, relational algebra, SQL querying, and implementation of DBMS for real-world applications.</p>
-                                </div>
-                                <div class="relative pl-6 border-l-2 border-purple-500/20">
-                                    <h4 class="text-md font-bold text-[var(--text-primary)] mb-2">Foundations of CS</h4>
-                                    <p class="text-[11px] text-[var(--text-secondary)] leading-relaxed">Solid grounding in computer systems, hardware architecture, networks, and number systems, along with essential system troubleshooting.</p>
-                                </div>
-                                <div class="relative pl-6 border-l-2 border-purple-500/20">
-                                    <h4 class="text-md font-bold text-[var(--text-primary)] mb-2">Introduction to Programming (C++)</h4>
-                                    <p class="text-[11px] text-[var(--text-secondary)] leading-relaxed">Structured problem-solving via modular C++ implementation, focusing on algorithms, control structures, and complex data handling.</p>
-                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Java & OOP Principles</h4>
                             </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Abstraction, Encapsulation, Inheritance, and Polymorphism applied to reusable software architectures.</p>
                         </div>
-
-                        <div class="card-premium p-10 relative overflow-hidden group">
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-orange-500/5 -mr-16 -mt-16 rounded-full group-hover:bg-orange-500/10 transition-colors"></div>
-                            <h3 class="text-xl font-bold text-[var(--text-primary)] mb-8 flex items-center">
-                                <i class="fas fa-globe-americas mr-3 text-orange-500"></i> Global Perspective & Communication
-                            </h3>
-                            <div class="space-y-10">
-                                <div class="relative pl-6 border-l-2 border-orange-500/20">
-                                    <h4 class="text-md font-bold text-[var(--text-primary)] mb-2">English Language Skills (Intermediate)</h4>
-                                    <p class="text-[11px] text-[var(--text-secondary)] leading-relaxed">Developing effective communication in academic and professional contexts, focusing on writing mechanics, oral presentation, and complex grammatical structures.</p>
+                        <div class="card-premium p-6 group hover:border-purple-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-database"></i>
                                 </div>
-                                <div class="relative pl-6 border-l-2 border-orange-500/20">
-                                    <h4 class="text-md font-bold text-[var(--text-primary)] mb-2">Social Harmony & Active Citizenship</h4>
-                                    <p class="text-[11px] text-[var(--text-secondary)] leading-relaxed">Foundational knowledge in social concepts and human rights to promote peace, community collaboration, and sustainable development through field projects.</p>
-                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Relational Database Systems</h4>
                             </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Normalization, Relational Algebra, SQL Querying, and DBMS implementation for industrial scale data.</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-purple-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Web Application Dev</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Full-stack engineering with HTML, CSS, JS, and server-side PHP/MySQL for dynamic interactive solutions.</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-purple-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-key"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Modern Cryptography</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Symmetric(DES/AES) and Asymmetric(RSA/Elliptic Curve) security with digital signatures and hash protocols.</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-purple-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-stream"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Parallel & Numerical Computing</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Parallel architectures, algorithmic error analysis, and high-performance computation using math tools.</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-purple-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-project-diagram"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">System Analysis & Design</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">UML modeling, functional decomposition, and Six Sigma quality assurance for phased system methodology.</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-purple-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-code-branch"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">DSA & Algorithms</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Analysis of efficiency, linear/non-linear data structures, recursion, and practical implementation.</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-purple-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Computer Security</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Threat mitigation, vulnerabilities, attack analysis, and secure OS protection mechanisms.</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-purple-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Software Engineering</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Process models, system requirements gathering, and high-quality maintainable application design.</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-purple-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Artificial Intelligence</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Search algorithms, NLP, robotics, and learning agents for complex real-world problem-solving.</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-purple-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Machine Learning</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Supervised/Unsupervised models, Neural Networks, SVMs, and predictive performance validation.</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-purple-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Advanced Networking</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Protocols, transmission media, OSI models, and advanced switching/routing technologies.</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-purple-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-paint-brush"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Graphics & HCI</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Modeling & Rendering algorithms, 3D transformations, and user-friendly interface design paradigms.</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-purple-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-terminal"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Operating Systems</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Concurrency management, memory/IO scheduling, and practical UNIX shell programming.</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-purple-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-microchip"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Architecture & Logic</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Instruction sets, program execution issues, and digital logic for future computer design.</p>
+                        </div>
+                    </div>
+
+                    <!-- Stats Tab -->
+                    <div id="ktab-stats" class="ktab-content hidden grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="card-premium p-6 group hover:border-green-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-green-500/10 rounded-lg flex items-center justify-center text-green-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-vial"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Design of Experiments</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">ANOVA methods, statistical software implementation, and experimental design interpretation.</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-green-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-green-500/10 rounded-lg flex items-center justify-center text-green-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-poll"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Sampling Theory</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Population parameter estimation, sample size determination, and error analysis techniques.</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-green-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-green-500/10 rounded-lg flex items-center justify-center text-green-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-chart-pie"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Statistical Inference</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Hypothesis testing, parametric/non-parametric tests, and decision-making for real-world problems.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pro Tabs -->
+                    <div id="ktab-pro" class="ktab-content hidden grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="card-premium p-6 group hover:border-orange-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-orange-500/10 rounded-lg flex items-center justify-center text-orange-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Soft Skills & Communication</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Leadership, negotiation, conflict resolution, and teamwork for professional productivity.</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-orange-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-orange-500/10 rounded-lg flex items-center justify-center text-orange-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Career Guidance & Mgmt</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Workplace attitudes, employer expectations, and entrepreneurial skill development.</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-orange-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-orange-500/10 rounded-lg flex items-center justify-center text-orange-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-microscope"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Research Methodology</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Scientific writing, literature analysis, research design, and evaluated findings presentation.</p>
+                        </div>
+                        <div class="card-premium p-6 group hover:border-orange-500/50 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-orange-500/10 rounded-lg flex items-center justify-center text-orange-500 mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-hand-holding-heart"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-[var(--text-primary)]">Social Harmony</h4>
+                            </div>
+                            <p class="text-[10px] text-[var(--text-secondary)] leading-relaxed">Active citizenship, human rights, and multicultural engagement for sustainable development.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Experience Section -->
 
         <!-- Experience Section -->
         <section id="experience" class="py-20 md:py-28 reveal">
@@ -1894,6 +2100,51 @@
             revealObserver.observe(el);
         });
     </script>
-</body>
 
+    <!-- Curriculum Intelligence Dashboard Script -->
+    <script>
+        function switchKTab(tabId) {
+            // Hide all contents
+            document.querySelectorAll('.ktab-content').forEach(el => el.classList.add('hidden'));
+            // Remove active state from all buttons
+            document.querySelectorAll('.ktab-btn').forEach(el => {
+                el.classList.remove('active', 'bg-[var(--accent)]', 'text-white');
+                el.classList.add('text-[var(--text-secondary)]');
+            });
+            
+            // Show target content
+            const target = document.getElementById('ktab-' + tabId);
+            if (target) {
+                target.classList.remove('hidden');
+                target.classList.add('grid');
+            }
+            
+            // Set active button
+            const btn = document.getElementById('btn-' + tabId);
+            if (btn) {
+                btn.classList.add('active', 'bg-[var(--accent)]', 'text-white');
+                btn.classList.remove('text-[var(--text-secondary)]');
+            }
+        }
+
+        // Initialize active tab style on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const activeBtn = document.querySelector('.ktab-btn.active');
+            if (activeBtn) {
+                activeBtn.classList.add('bg-[var(--accent)]', 'text-white');
+            }
+        });
+    </script>
+    <style>
+        .ktab-btn {
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(10px);
+        }
+        .ktab-btn:hover:not(.active) {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--accent);
+        }
+    </style>
+</body>
 </html>
